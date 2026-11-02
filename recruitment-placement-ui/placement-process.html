@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement Workflow & Offer Operations - RPMS Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="app-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="brand-info">
+        <span class="brand-title">RPMS Portal</span>
+        <span class="brand-subtitle">Placement & Career</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Core Navigation</div>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="candidates.html" class="nav-item">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>Candidates</span>
+      </a>
+      <a href="companies.html" class="nav-item">
+        <i class="fa-solid fa-building"></i>
+        <span>Companies</span>
+      </a>
+      <a href="jobs.html" class="nav-item">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Jobs</span>
+      </a>
+      <a href="applications.html" class="nav-item">
+        <i class="fa-solid fa-file-signature"></i>
+        <span>Applications</span>
+      </a>
+      <a href="interviews.html" class="nav-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Interviews</span>
+      </a>
+      <a href="placement-process.html" class="nav-item active">
+        <i class="fa-solid fa-stairs"></i>
+        <span>Placement Process</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Reports</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="app-main">
+
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('mobile-open')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="system-title-badge">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span class="portal-text">Recruitment & Placement Management System</span>
+        </div>
+      </div>
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search offers, candidate roll...">
+      </div>
+      <div class="header-right">
+        <div class="notification-bell">
+          <i class="fa-regular fa-bell"></i>
+          <span class="bell-badge"></span>
+        </div>
+        <div class="user-profile-widget">
+          <div class="user-avatar">PO</div>
+          <div class="user-meta">
+            <span class="user-name">Pratik Sharma</span>
+            <span class="user-role">Placement Officer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="page-content">
+
+      <!-- Breadcrumbs & Header -->
+      <div class="page-header">
+        <div>
+          <div class="breadcrumb">
+            <a href="dashboard.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <span class="current">Placement Lifecycle</span>
+          </div>
+          <h1 class="page-title">Placement Workflow & Offer Operations</h1>
+          <p class="page-subtitle">Transition selected candidates from panel debriefs, offer letters generation, to verified institutional joining</p>
+        </div>
+        <div class="header-actions">
+          <a href="reports.html" class="btn btn-secondary">
+            <i class="fa-solid fa-chart-pie"></i> Placement Analytics
+          </a>
+        </div>
+      </div>
+
+      <!-- Visual Workflow Progress Steps -->
+      <div class="card" style="margin-bottom: 1.75rem;">
+        <div class="card-body">
+          <div class="process-flow">
+            <div class="flow-step-item completed">
+              <div class="flow-icon"><i class="fa-solid fa-check"></i></div>
+              <div class="flow-title">1. Selected</div>
+              <div class="flow-desc">Panel Cleared</div>
+            </div>
+            <div class="flow-connector filled"></div>
+
+            <div class="flow-step-item completed">
+              <div class="flow-icon"><i class="fa-solid fa-file-contract"></i></div>
+              <div class="flow-title">2. Offer Created</div>
+              <div class="flow-desc">CTC & Terms Sent</div>
+            </div>
+            <div class="flow-connector filled"></div>
+
+            <div class="flow-step-item active">
+              <div class="flow-icon"><i class="fa-solid fa-handshake"></i></div>
+              <div class="flow-title">3. Offer Accepted</div>
+              <div class="flow-desc">Consent Signed</div>
+            </div>
+            <div class="flow-connector"></div>
+
+            <div class="flow-step-item">
+              <div class="flow-icon"><i class="fa-solid fa-building-circle-arrow-right"></i></div>
+              <div class="flow-title">4. Joined</div>
+              <div class="flow-desc">Onboarding Complete</div>
+            </div>
+            <div class="flow-connector"></div>
+
+            <div class="flow-step-item">
+              <div class="flow-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="flow-title">5. Placed</div>
+              <div class="flow-desc">Final Institute Record</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Clear Sections / Tabs -->
+      <div class="card" style="margin-bottom: 1.75rem;">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-sliders"></i> Placement Operations Console
+          </div>
+          <span class="card-subtitle">Choose operational stage below</span>
+        </div>
+
+        <div class="card-body">
+          <!-- Tab Navigation -->
+          <div class="tabs-nav">
+            <a href="#section-feedback" class="tab-link active" onclick="showTab(event, 'tab-feedback')">
+              <i class="fa-solid fa-comment-dots"></i> Section A: Interview Feedback
+            </a>
+            <a href="#section-offer" class="tab-link" onclick="showTab(event, 'tab-offer')">
+              <i class="fa-solid fa-file-contract"></i> Section B: Offer Details
+            </a>
+            <a href="#section-joining" class="tab-link" onclick="showTab(event, 'tab-joining')">
+              <i class="fa-solid fa-user-check"></i> Section C: Joining & Placement
+            </a>
+          </div>
+
+          <!-- SECTION A: INTERVIEW FEEDBACK -->
+          <div id="tab-feedback" class="tab-content-panel">
+            <div class="form-section">
+              <div class="form-section-title">
+                <i class="fa-solid fa-pen-to-square" style="color: var(--primary);"></i> Record Panel Evaluation & Rating
+              </div>
+              <p class="form-section-desc">Assess candidate competencies from 1 (Needs Improvement) to 5 (Outstanding)</p>
+
+              <form action="#" method="get" onsubmit="alert('Interview feedback and decision saved successfully!'); return false;">
+                <div class="form-grid-3">
+                  <div class="form-group col-span-2">
+                    <label class="form-label" for="feedCand">Candidate & Interview Session <span class="required">*</span></label>
+                    <select id="feedCand" class="form-control" required>
+                      <option value="">-- Select Candidate Session --</option>
+                      <option value="INT1001" selected>CAN1001: Aarav Sharma - TCS Technical Round 1 (INT1001)</option>
+                      <option value="INT1002">CAN1002: Priya Patel - Infosys Managerial (INT1002)</option>
+                      <option value="INT1003">CAN1003: Rahul Verma - Wipro HR Round (INT1003)</option>
+                      <option value="INT1004">CAN1004: Ananya Iyer - Zoho System Design (INT1004)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="feedResult">Interview Result <span class="required">*</span></label>
+                    <select id="feedResult" class="form-control" required>
+                      <option value="NEXT_ROUND">NEXT_ROUND (Advance to Next Level)</option>
+                      <option value="SELECTED" selected>SELECTED (Recommend for Offer)</option>
+                      <option value="REJECTED">REJECTED (Did Not Meet Cutoff)</option>
+                      <option value="ON_HOLD">ON_HOLD (Comparative Evaluation)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Technical Rating (1 - 5) <span class="required">*</span></label>
+                    <select class="form-control" required>
+                      <option value="5" selected>5 - Outstanding (DSA, Design & OOP)</option>
+                      <option value="4">4 - Strong Core Proficiency</option>
+                      <option value="3">3 - Acceptable / Meets Baseline</option>
+                      <option value="2">2 - Needs Training</option>
+                      <option value="1">1 - Unsatisfactory</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Communication Rating (1 - 5) <span class="required">*</span></label>
+                    <select class="form-control" required>
+                      <option value="5">5 - Articulate & Professional</option>
+                      <option value="4" selected>4 - Clear & Responsive</option>
+                      <option value="3">3 - Moderate</option>
+                      <option value="2">2 - Hesitant</option>
+                      <option value="1">1 - Poor</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Problem Solving Rating (1 - 5) <span class="required">*</span></label>
+                    <select class="form-control" required>
+                      <option value="5" selected>5 - Innovative & Algorithmic</option>
+                      <option value="4">4 - Structured Approach</option>
+                      <option value="3">3 - Basic Reasoning</option>
+                      <option value="2">2 - Struggles with Edge Cases</option>
+                      <option value="1">1 - Cannot Formulate Logic</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Overall Rating (1 - 5) <span class="required">*</span></label>
+                    <select class="form-control" required>
+                      <option value="5" selected>5 / 5 - Top Quartile Recommendation</option>
+                      <option value="4">4 / 5 - Recommended</option>
+                      <option value="3">3 / 5 - Borderline Acceptable</option>
+                      <option value="2">2 / 5 - Not Recommended</option>
+                      <option value="1">1 / 5 - Reject</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-span-2">
+                    <label class="form-label" for="feedRemarks">Feedback Remarks & Notes <span class="required">*</span></label>
+                    <textarea id="feedRemarks" class="form-control" placeholder="Provide constructive technical and behavioral remarks..." required>Exceptional command over Java collections, multithreading, and Spring Boot architecture. Solved the concurrent thread synchronization puzzle flawlessly. Recommended for immediate offer rollout.</textarea>
+                  </div>
+                </div>
+
+                <div class="filter-actions">
+                  <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-floppy-disk"></i> Save Feedback & Submit Scorecard
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- SECTION B: OFFER DETAILS -->
+          <div id="tab-offer" class="tab-content-panel" style="display: none;">
+            <div class="form-section">
+              <div class="form-section-title">
+                <i class="fa-solid fa-file-invoice" style="color: var(--primary);"></i> Generate & Manage Job Offer
+              </div>
+              <p class="form-section-desc">Issue corporate offer letters, fix compensation packages, and monitor candidate acceptance</p>
+
+              <form action="#" method="get" onsubmit="alert('Offer updated and notification sent!'); return false;">
+                <div class="form-grid-3">
+                  <div class="form-group">
+                    <label class="form-label" for="offerCand">Candidate <span class="required">*</span></label>
+                    <select id="offerCand" class="form-control" required>
+                      <option value="CAN1001" selected>Aarav Sharma (CAN1001)</option>
+                      <option value="CAN1002">Priya Patel (CAN1002)</option>
+                      <option value="CAN1004">Ananya Iyer (CAN1004)</option>
+                      <option value="CAN1005">Rohan Deshmukh (CAN1005)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="offerComp">Company <span class="required">*</span></label>
+                    <select id="offerComp" class="form-control" required>
+                      <option value="TCS" selected>Tata Consultancy Services</option>
+                      <option value="Infosys">Infosys Technologies</option>
+                      <option value="Wipro">Wipro Digital</option>
+                      <option value="Zoho">Zoho Corporation</option>
+                      <option value="Tech Mahindra">Tech Mahindra</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="offerJob">Job Role / Code <span class="required">*</span></label>
+                    <input type="text" id="offerJob" class="form-control" value="JOB-2026-001 (Software Engineer)" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="offerDesig">Official Designation <span class="required">*</span></label>
+                    <input type="text" id="offerDesig" class="form-control" value="Associate Software Developer" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="offerPackage">Offered Package (CTC in LPA) <span class="required">*</span></label>
+                    <input type="number" id="offerPackage" class="form-control" value="7.0" step="0.1" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="offerDate">Offer Rollout Date <span class="required">*</span></label>
+                    <input type="date" id="offerDate" class="form-control" value="2026-10-30" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="offerJoinDate">Expected Joining Date <span class="required">*</span></label>
+                    <input type="date" id="offerJoinDate" class="form-control" value="2026-07-15" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="offerStatus">Offer Status <span class="required">*</span></label>
+                    <select id="offerStatus" class="form-control" required>
+                      <option value="OFFERED" selected>OFFERED (Awaiting Student Acceptance)</option>
+                      <option value="ACCEPTED">ACCEPTED (Student Signed LOI)</option>
+                      <option value="REJECTED">REJECTED (Candidate Declined)</option>
+                      <option value="EXPIRED">EXPIRED (Past Deadline)</option>
+                      <option value="WITHDRAWN">WITHDRAWN (By Corporate)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter-actions">
+                  <button type="submit" class="btn btn-outline"><i class="fa-solid fa-arrows-rotate"></i> Update Offer Status</button>
+                  <button type="submit" class="btn btn-primary"><i class="fa-solid fa-envelope-open-text"></i> Create & Dispatch Offer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- SECTION C: JOINING AND PLACEMENT -->
+          <div id="tab-joining" class="tab-content-panel" style="display: none;">
+            <div class="form-section">
+              <div class="form-section-title">
+                <i class="fa-solid fa-user-check" style="color: var(--primary);"></i> Confirm Institutional Joining & Final Placement
+              </div>
+              <p class="form-section-desc">Record onboarding proof, physical reporting date, and archive final institutional placement status</p>
+
+              <form action="#" method="get" onsubmit="alert('Candidate confirmed as PLACED!'); return false;">
+                <div class="form-grid-3">
+                  <div class="form-group">
+                    <label class="form-label" for="joinCand">Candidate <span class="required">*</span></label>
+                    <select id="joinCand" class="form-control" required>
+                      <option value="CAN1005" selected>Rohan Deshmukh (CAN1005)</option>
+                      <option value="CAN1006">Sneha Kulkarni (CAN1006)</option>
+                      <option value="CAN1007">Vikram Nair (CAN1007)</option>
+                      <option value="CAN1001">Aarav Sharma (CAN1001)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="joinComp">Hiring Company <span class="required">*</span></label>
+                    <input type="text" id="joinComp" class="form-control" value="Zoho Corporation" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="joinDate">Actual Joining Date <span class="required">*</span></label>
+                    <input type="date" id="joinDate" class="form-control" value="2026-07-01" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="joinStatus">Joining Status <span class="required">*</span></label>
+                    <select id="joinStatus" class="form-control" required>
+                      <option value="JOINED" selected>JOINED (Verified Onboarded)</option>
+                      <option value="NOT_JOINED">NOT_JOINED (Declined Reporting)</option>
+                      <option value="DEFERRED">DEFERRED (Requested Extension)</option>
+                      <option value="NO_SHOW">NO_SHOW (Unreported)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-span-2">
+                    <label class="form-label" for="joinRemarks">Verification Proof & Employee ID</label>
+                    <input type="text" id="joinRemarks" class="form-control" placeholder="e.g. Employee ID: ZOHO-DEV-9812 | Relieving verified" value="Employee ID: ZOHO-ENG-4412 | Onboarding Welcome Letter Attached">
+                  </div>
+                </div>
+
+                <div class="filter-actions">
+                  <button type="submit" class="btn btn-outline"><i class="fa-solid fa-check"></i> Confirm Joining</button>
+                  <button type="submit" class="btn btn-success"><i class="fa-solid fa-award"></i> Mark Placed (Archive Record)</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Master Offer & Placement Records Table (At least 6 Sample Records) -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-award"></i> Master Offer & Placement Registry (Showing 6 Records)
+          </div>
+          <span class="card-subtitle">Institute placement statistics verified records</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Candidate Name</th>
+                  <th>Company</th>
+                  <th>Designation</th>
+                  <th>Package (CTC)</th>
+                  <th>Offer Status</th>
+                  <th>Joining Date</th>
+                  <th>Joining Status</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- 1 -->
+                <tr>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm" style="background:var(--success-bg); color:var(--success);">RD</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Rohan Deshmukh</a>
+                        <div class="sub-meta">CAN1005 • MCA</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Zoho Corporation</strong></td>
+                  <td>Software Developer</td>
+                  <td><strong style="color: var(--success); font-size: 1rem;">10.0 LPA</strong></td>
+                  <td><span class="badge badge-accepted"><span class="badge-dot"></span>ACCEPTED</span></td>
+                  <td>2026-07-01</td>
+                  <td><span class="badge badge-joined"><span class="badge-dot"></span>JOINED</span></td>
+                </tr>
+
+                <!-- 2 -->
+                <tr>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm" style="background:var(--success-bg); color:var(--success);">SK</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Sneha Kulkarni</a>
+                        <div class="sub-meta">CAN1006 • BE</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Tata Consultancy Services</strong></td>
+                  <td>Systems Engineer</td>
+                  <td><strong style="color: var(--success); font-size: 1rem;">7.2 LPA</strong></td>
+                  <td><span class="badge badge-accepted"><span class="badge-dot"></span>ACCEPTED</span></td>
+                  <td>2026-07-15</td>
+                  <td><span class="badge badge-joined"><span class="badge-dot"></span>JOINED</span></td>
+                </tr>
+
+                <!-- 3 -->
+                <tr>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm" style="background:var(--success-bg); color:var(--success);">VN</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Vikram Nair</a>
+                        <div class="sub-meta">CAN1007 • BTech</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Tech Mahindra</strong></td>
+                  <td>Cloud Associate</td>
+                  <td><strong style="color: var(--success); font-size: 1rem;">6.5 LPA</strong></td>
+                  <td><span class="badge badge-accepted"><span class="badge-dot"></span>ACCEPTED</span></td>
+                  <td>2026-07-10</td>
+                  <td><span class="badge badge-joined"><span class="badge-dot"></span>JOINED</span></td>
+                </tr>
+
+                <!-- 4 -->
+                <tr>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm">AS</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Aarav Sharma</a>
+                        <div class="sub-meta">CAN1001 • BE CS</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Tata Consultancy Services</strong></td>
+                  <td>Associate Software Dev</td>
+                  <td><strong style="color: var(--primary);">7.0 LPA</strong></td>
+                  <td><span class="badge badge-offered"><span class="badge-dot"></span>OFFERED</span></td>
+                  <td>2026-07-15 (Expected)</td>
+                  <td><span class="badge badge-deferred"><span class="badge-dot"></span>DEFERRED</span></td>
+                </tr>
+
+                <!-- 5 -->
+                <tr>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm">AI</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Ananya Iyer</a>
+                        <div class="sub-meta">CAN1004 • BTech</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Zoho Corporation</strong></td>
+                  <td>Full Stack Engineer</td>
+                  <td><strong style="color: var(--primary);">8.5 LPA</strong></td>
+                  <td><span class="badge badge-offered"><span class="badge-dot"></span>OFFERED</span></td>
+                  <td>2026-08-01 (Expected)</td>
+                  <td><span class="badge badge-on_hold"><span class="badge-dot"></span>PENDING</span></td>
+                </tr>
+
+                <!-- 6 -->
+                <tr>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm" style="background:#fee2e2; color:#dc2626;">KB</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Kunal Bansal</a>
+                        <div class="sub-meta">CAN1015 • BCA</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><strong>Cognizant Interactive</strong></td>
+                  <td>Programmer Analyst</td>
+                  <td><strong style="color: var(--text-muted);">5.5 LPA</strong></td>
+                  <td><span class="badge badge-rejected"><span class="badge-dot"></span>REJECTED</span></td>
+                  <td>--</td>
+                  <td><span class="badge badge-inactive"><span class="badge-dot"></span>NOT_JOINED</span></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+  function showTab(e, tabId) {
+    e.preventDefault();
+    document.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
+    document.querySelectorAll('.tab-content-panel').forEach(tab => tab.style.display = 'none');
+    
+    e.currentTarget.classList.add('active');
+    document.getElementById(tabId).style.display = 'block';
+  }
+</script>
+<script src="js/app-live.js"></script>
+</body>
+</html>

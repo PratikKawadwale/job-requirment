@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Scheduling & Operations - RPMS Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="app-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="brand-info">
+        <span class="brand-title">RPMS Portal</span>
+        <span class="brand-subtitle">Placement & Career</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Core Navigation</div>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="candidates.html" class="nav-item">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>Candidates</span>
+      </a>
+      <a href="companies.html" class="nav-item">
+        <i class="fa-solid fa-building"></i>
+        <span>Companies</span>
+      </a>
+      <a href="jobs.html" class="nav-item">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Jobs</span>
+      </a>
+      <a href="applications.html" class="nav-item">
+        <i class="fa-solid fa-file-signature"></i>
+        <span>Applications</span>
+      </a>
+      <a href="interviews.html" class="nav-item active">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Interviews</span>
+      </a>
+      <a href="placement-process.html" class="nav-item">
+        <i class="fa-solid fa-stairs"></i>
+        <span>Placement Process</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Reports</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="app-main">
+
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('mobile-open')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="system-title-badge">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span class="portal-text">Recruitment & Placement Management System</span>
+        </div>
+      </div>
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search scheduled interviews...">
+      </div>
+      <div class="header-right">
+        <div class="notification-bell">
+          <i class="fa-regular fa-bell"></i>
+          <span class="bell-badge"></span>
+        </div>
+        <div class="user-profile-widget">
+          <div class="user-avatar">PO</div>
+          <div class="user-meta">
+            <span class="user-name">Pratik Sharma</span>
+            <span class="user-role">Placement Officer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="page-content">
+
+      <!-- Breadcrumbs & Header -->
+      <div class="page-header">
+        <div>
+          <div class="breadcrumb">
+            <a href="dashboard.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <span class="current">Interview Operations</span>
+          </div>
+          <h1 class="page-title">Interview Coordination & Tracking</h1>
+          <p class="page-subtitle">Schedule panel evaluation sessions, notify candidates, track attendance, and log feedback</p>
+        </div>
+        <div class="header-actions">
+          <a href="#scheduleModalSection" class="btn btn-primary">
+            <i class="fa-solid fa-calendar-plus"></i> New Schedule
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Summary KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-info">
+            <h4>Today's Sessions</h4>
+            <div class="kpi-number">6</div>
+            <div class="kpi-trend trend-up"><i class="fa-solid fa-clock"></i> 2 active right now</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-calendar-day"></i></div>
+        </div>
+
+        <div class="kpi-card kpi-orange">
+          <div class="kpi-info">
+            <h4>Upcoming (Week)</h4>
+            <div class="kpi-number">24</div>
+            <div class="kpi-trend trend-muted"><i class="fa-solid fa-calendar-week"></i> Across 5 companies</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        </div>
+
+        <div class="kpi-card kpi-green">
+          <div class="kpi-info">
+            <h4>Completed Interviews</h4>
+            <div class="kpi-number">450</div>
+            <div class="kpi-trend trend-up"><i class="fa-solid fa-circle-check"></i> Cleared & evaluated</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-square-check"></i></div>
+        </div>
+
+        <div class="kpi-card kpi-purple">
+          <div class="kpi-info">
+            <h4>Pending Feedback</h4>
+            <div class="kpi-number">18</div>
+            <div class="kpi-trend trend-down"><i class="fa-solid fa-hourglass-half"></i> Awaiting panel score</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-comment-dots"></i></div>
+        </div>
+      </div>
+
+      <!-- Section: Today's Scheduled Interview Lineup -->
+      <div class="card" style="margin-bottom: 1.75rem;">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-business-time"></i> Today's Live Interview Lineup (6 Sessions)
+          </div>
+          <span class="badge badge-open"><i class="fa-solid fa-satellite-dish"></i> Live Day Schedule</span>
+        </div>
+        <div class="card-body">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+            
+            <div style="background:#ffffff; border:1px solid var(--border-color); border-left:4px solid var(--primary); border-radius:var(--radius-md); padding:1rem; box-shadow:var(--shadow-xs);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+                <span class="badge badge-interview">10:30 AM - 11:15 AM</span>
+                <span class="badge badge-scheduled">SCHEDULED</span>
+              </div>
+              <h4 style="font-size:0.95rem; margin-bottom:0.2rem;"><a href="candidate-details.html">Aarav Sharma (CAN1001)</a></h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-building"></i> Tata Consultancy Services</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.75rem; font-size:0.78rem;">
+                <span><i class="fa-solid fa-video" style="color:var(--accent);"></i> MS Teams Link</span>
+                <a href="placement-process.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Feedback</a>
+              </div>
+            </div>
+
+            <div style="background:#ffffff; border:1px solid var(--border-color); border-left:4px solid var(--primary); border-radius:var(--radius-md); padding:1rem; box-shadow:var(--shadow-xs);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+                <span class="badge badge-interview">02:00 PM - 02:45 PM</span>
+                <span class="badge badge-scheduled">SCHEDULED</span>
+              </div>
+              <h4 style="font-size:0.95rem; margin-bottom:0.2rem;"><a href="candidate-details.html">Priya Patel (CAN1002)</a></h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-building"></i> Infosys Technologies</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.75rem; font-size:0.78rem;">
+                <span><i class="fa-solid fa-video" style="color:var(--accent);"></i> Google Meet</span>
+                <a href="placement-process.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Feedback</a>
+              </div>
+            </div>
+
+            <div style="background:#ffffff; border:1px solid var(--border-color); border-left:4px solid var(--warning); border-radius:var(--radius-md); padding:1rem; box-shadow:var(--shadow-xs);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+                <span class="badge badge-interview">03:30 PM - 04:15 PM</span>
+                <span class="badge badge-on_hold">PENDING SLATE</span>
+              </div>
+              <h4 style="font-size:0.95rem; margin-bottom:0.2rem;"><a href="candidate-details.html">Rahul Verma (CAN1003)</a></h4>
+              <p style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-building"></i> Wipro Digital</p>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.75rem; font-size:0.78rem;">
+                <span><i class="fa-solid fa-door-open" style="color:var(--warning);"></i> Offline Lab 204</span>
+                <a href="placement-process.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-pen"></i> Feedback</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERVIEW SCHEDULING FORM -->
+      <div class="card" id="scheduleModalSection">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-calendar-plus"></i> Schedule New Panel Interview
+          </div>
+          <span class="card-subtitle">Dispatch calendar invites, round specifications, and panel evaluators</span>
+        </div>
+        <div class="card-body">
+          <form action="#" method="get" onsubmit="alert('Interview successfully scheduled and student notified!'); return false;">
+            <div class="form-grid-4">
+              <div class="form-group">
+                <label class="form-label" for="intCandidate">Candidate <span class="required">*</span></label>
+                <select id="intCandidate" class="form-control" required>
+                  <option value="">-- Select Candidate --</option>
+                  <option value="CAN1001" selected>Aarav Sharma (CAN1001)</option>
+                  <option value="CAN1002">Priya Patel (CAN1002)</option>
+                  <option value="CAN1003">Rahul Verma (CAN1003)</option>
+                  <option value="CAN1004">Ananya Iyer (CAN1004)</option>
+                  <option value="CAN1009">Aditya Joshi (CAN1009)</option>
+                  <option value="CAN1010">Meera Sen (CAN1010)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="intCompany">Company <span class="required">*</span></label>
+                <select id="intCompany" class="form-control" required>
+                  <option value="TCS" selected>Tata Consultancy Services</option>
+                  <option value="Infosys">Infosys Technologies</option>
+                  <option value="Wipro">Wipro Digital</option>
+                  <option value="Zoho">Zoho Corporation</option>
+                  <option value="Cognizant">Cognizant Interactive</option>
+                  <option value="Tech Mahindra">Tech Mahindra</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="intJob">Job Requisition <span class="required">*</span></label>
+                <select id="intJob" class="form-control" required>
+                  <option value="JOB-2026-001" selected>JOB-2026-001 (Software Engineer Java)</option>
+                  <option value="JOB-2026-002">JOB-2026-002 (Associate Systems Eng)</option>
+                  <option value="JOB-2026-003">JOB-2026-003 (Frontend Specialist)</option>
+                  <option value="JOB-2026-004">JOB-2026-004 (Full Stack Developer)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="intRound">Interview Round <span class="required">*</span></label>
+                <select id="intRound" class="form-control" required>
+                  <option value="Aptitude">Aptitude & Logical Assessment</option>
+                  <option value="Technical" selected>Technical Round (Coding & Arch)</option>
+                  <option value="Managerial">Managerial / Technical Director</option>
+                  <option value="HR">HR & Culture Fitment</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="intDate">Interview Date <span class="required">*</span></label>
+                <input type="date" id="intDate" class="form-control" value="2026-11-02" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="intTime">Interview Time <span class="required">*</span></label>
+                <input type="time" id="intTime" class="form-control" value="10:30" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="intMode">Interview Mode <span class="required">*</span></label>
+                <select id="intMode" class="form-control" required>
+                  <option value="Online" selected>Online (MS Teams / Zoom / Meet)</option>
+                  <option value="Offline">Offline (Campus Placement Cell)</option>
+                  <option value="Telephonic">Telephonic Assessment</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="interviewer">Interviewer / Panel Name <span class="required">*</span></label>
+                <input type="text" id="interviewer" class="form-control" placeholder="e.g. Rajesh Menon (Sr Architect)" value="Rajesh Menon (Sr Architect)" required>
+              </div>
+            </div>
+
+            <div class="filter-actions">
+              <button type="reset" class="btn btn-secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+              <button type="submit" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Schedule Interview Session</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Interview Records Table with at least 8 Sample Records -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-list-check"></i> Interview Schedule & Records (Showing 8 Sample Sessions)
+          </div>
+          <span class="card-subtitle">Track candidate performance, record outcomes, or log panel feedback</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Interview ID</th>
+                  <th>Candidate</th>
+                  <th>Company</th>
+                  <th>Job Role</th>
+                  <th>Round</th>
+                  <th>Schedule Date & Time</th>
+                  <th>Mode</th>
+                  <th>Status</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- 1 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">INT1001</strong></td>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm">AS</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Aarav Sharma</a>
+                        <div class="sub-meta">CAN1001 • Java</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Tata Consultancy Services</td>
+                  <td>Software Engineer (Java)</td>
+                  <td><span class="badge badge-interview">Technical</span></td>
+                  <td>2026-11-02 <br><span class="sub-meta">10:30 AM IST</span></td>
+                  <td><span class="skill-pill"><i class="fa-solid fa-video"></i> Online</span></td>
+                  <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="placement-process.html" class="btn btn-sm btn-primary" title="Record Feedback">
+                        <i class="fa-solid fa-pen"></i> Add Feedback
+                      </a>
+                      <button class="btn btn-sm btn-secondary" onclick="alert('Reschedule notice generated.');" title="Reschedule">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 2 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">INT1002</strong></td>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm">PP</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Priya Patel</a>
+                        <div class="sub-meta">CAN1002 • Python</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Infosys Technologies</td>
+                  <td>Associate Systems Eng</td>
+                  <td><span class="badge badge-interview">Managerial</span></td>
+                  <td>2026-11-02 <br><span class="sub-meta">02:00 PM IST</span></td>
+                  <td><span class="skill-pill"><i class="fa-solid fa-video"></i> Online</span></td>
+                  <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="placement-process.html" class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i> Add Feedback</a>
+                      <button class="btn btn-sm btn-secondary" onclick="alert('Reschedule notice generated.');"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 3 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">INT1003</strong></td>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm">RV</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Rahul Verma</a>
+                        <div class="sub-meta">CAN1003 • React</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Wipro Digital</td>
+                  <td>Frontend Specialist</td>
+                  <td><span class="badge badge-applied">HR Round</span></td>
+                  <td>2026-11-03 <br><span class="sub-meta">11:15 AM IST</span></td>
+                  <td><span class="skill-pill"><i class="fa-solid fa-building"></i> Offline</span></td>
+                  <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="placement-process.html" class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i> Add Feedback</a>
+                      <button class="btn btn-sm btn-secondary" onclick="alert('Reschedule notice generated.');"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 4 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">INT1004</strong></td>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm">AI</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Ananya Iyer</a>
+                        <div class="sub-meta">CAN1004 • Full Stack</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Zoho Corporation</td>
+                  <td>Full Stack Developer</td>
+                  <td><span class="badge badge-interview">System Design</span></td>
+                  <td>2026-11-03 <br><span class="sub-meta">03:30 PM IST</span></td>
+                  <td><span class="skill-pill"><i class="fa-solid fa-video"></i> Online</span></td>
+                  <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="placement-process.html" class="btn btn-sm btn-primary"><i class="fa-solid fa-pen"></i> Add Feedback</a>
+                      <button class="btn btn-sm btn-secondary" onclick="alert('Reschedule notice generated.');"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 5 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">INT1005</strong></td>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm" style="background:var(--success-bg); color:var(--success);">RD</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Rohan Deshmukh</a>
+                        <div class="sub-meta">CAN1005 • Cleared</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Zoho Corporation</td>
+                  <td>Full Stack Developer</td>
+                  <td><span class="badge badge-interview">Technical 2</span></td>
+                  <td>2026-10-26 <br><span class="sub-meta">04:00 PM IST</span></td>
+                  <td><span class="skill-pill"><i class="fa-solid fa-video"></i> Online</span></td>
+                  <td><span class="badge badge-selected"><span class="badge-dot"></span>COMPLETED</span></td>
+                  <td style="text-align: right;">
+                    <a href="placement-process.html" class="btn btn-sm btn-success"><i class="fa-solid fa-award"></i> Manage Offer</a>
+                  </td>
+                </tr>
+
+                <!-- 6 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">INT1006</strong></td>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm" style="background:var(--success-bg); color:var(--success);">SK</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Sneha Kulkarni</a>
+                        <div class="sub-meta">CAN1006 • Cleared</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Tata Consultancy Services</td>
+                  <td>Systems Engineer</td>
+                  <td><span class="badge badge-interview">Technical & HR</span></td>
+                  <td>2026-10-26 <br><span class="sub-meta">11:00 AM IST</span></td>
+                  <td><span class="skill-pill"><i class="fa-solid fa-building"></i> Offline</span></td>
+                  <td><span class="badge badge-selected"><span class="badge-dot"></span>COMPLETED</span></td>
+                  <td style="text-align: right;">
+                    <a href="placement-process.html" class="btn btn-sm btn-success"><i class="fa-solid fa-award"></i> Manage Offer</a>
+                  </td>
+                </tr>
+
+                <!-- 7 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">INT1007</strong></td>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm" style="background:var(--success-bg); color:var(--success);">VN</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Vikram Nair</a>
+                        <div class="sub-meta">CAN1007 • Cleared</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Tech Mahindra</td>
+                  <td>Cloud DevOps Trainee</td>
+                  <td><span class="badge badge-interview">Technical 1</span></td>
+                  <td>2026-10-25 <br><span class="sub-meta">01:30 PM IST</span></td>
+                  <td><span class="skill-pill"><i class="fa-solid fa-video"></i> Online</span></td>
+                  <td><span class="badge badge-selected"><span class="badge-dot"></span>COMPLETED</span></td>
+                  <td style="text-align: right;">
+                    <a href="placement-process.html" class="btn btn-sm btn-success"><i class="fa-solid fa-award"></i> Manage Offer</a>
+                  </td>
+                </tr>
+
+                <!-- 8 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">INT1008</strong></td>
+                  <td>
+                    <div class="candidate-name-cell">
+                      <div class="candidate-avatar-sm" style="background:var(--danger-bg); color:var(--danger);">SM</div>
+                      <div>
+                        <a href="candidate-details.html" class="text-strong">Siddharth M.</a>
+                        <div class="sub-meta">CAN1013 • Absent</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Tech Mahindra</td>
+                  <td>Cloud DevOps Trainee</td>
+                  <td><span class="badge badge-interview">Technical 1</span></td>
+                  <td>2026-10-25 <br><span class="sub-meta">10:00 AM IST</span></td>
+                  <td><span class="skill-pill"><i class="fa-solid fa-video"></i> Online</span></td>
+                  <td><span class="badge badge-no_show"><span class="badge-dot"></span>NO_SHOW</span></td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-sm btn-secondary" onclick="alert('Candidate recorded as No Show.');">
+                      <i class="fa-solid fa-triangle-exclamation"></i> Flagged
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/app-live.js"></script>
+</body>
+</html>

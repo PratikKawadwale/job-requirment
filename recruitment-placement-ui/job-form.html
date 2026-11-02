@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Requisition Form - RPMS Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="app-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="brand-info">
+        <span class="brand-title">RPMS Portal</span>
+        <span class="brand-subtitle">Placement & Career</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Core Navigation</div>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="candidates.html" class="nav-item">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>Candidates</span>
+      </a>
+      <a href="companies.html" class="nav-item">
+        <i class="fa-solid fa-building"></i>
+        <span>Companies</span>
+      </a>
+      <a href="jobs.html" class="nav-item active">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Jobs</span>
+      </a>
+      <a href="applications.html" class="nav-item">
+        <i class="fa-solid fa-file-signature"></i>
+        <span>Applications</span>
+      </a>
+      <a href="interviews.html" class="nav-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Interviews</span>
+      </a>
+      <a href="placement-process.html" class="nav-item">
+        <i class="fa-solid fa-stairs"></i>
+        <span>Placement Process</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Reports</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="app-main">
+
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('mobile-open')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="system-title-badge">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span class="portal-text">Recruitment & Placement Management System</span>
+        </div>
+      </div>
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search job roles, codes...">
+      </div>
+      <div class="header-right">
+        <div class="notification-bell">
+          <i class="fa-regular fa-bell"></i>
+          <span class="bell-badge"></span>
+        </div>
+        <div class="user-profile-widget">
+          <div class="user-avatar">PO</div>
+          <div class="user-meta">
+            <span class="user-name">Pratik Sharma</span>
+            <span class="user-role">Placement Officer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="page-content">
+
+      <!-- Breadcrumbs & Header -->
+      <div class="page-header">
+        <div>
+          <div class="breadcrumb">
+            <a href="dashboard.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <a href="jobs.html">Jobs</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <span class="current">Create / Edit Job Mandate</span>
+          </div>
+          <h1 class="page-title">Job Requisition Specification</h1>
+          <p class="page-subtitle">Configure placement job profile, eligibility thresholds, salary packages, and cutoffs</p>
+        </div>
+        <div class="header-actions">
+          <a href="jobs.html" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Back to Jobs
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Form Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-pen-nib"></i> Job Requisition Form (Edit Mode: JOB-2026-001)
+          </div>
+          <span class="badge badge-open"><span class="badge-dot"></span>OPEN FOR APPLICATIONS</span>
+        </div>
+
+        <div class="card-body">
+          <form action="jobs.html" method="get">
+
+            <!-- SECTION 1: BASIC INFORMATION -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <i class="fa-solid fa-building" style="color: var(--primary);"></i>
+                1. Basic Job Information
+              </div>
+              <p class="form-section-desc">Core corporate identity, role title, and campus openings quota</p>
+
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label class="form-label" for="jobCompany">Company <span class="required">*</span></label>
+                  <select id="jobCompany" name="jobCompany" class="form-control" required>
+                    <option value="">-- Select Company --</option>
+                    <option value="COM101" selected>Tata Consultancy Services (TCS)</option>
+                    <option value="COM102">Infosys Technologies</option>
+                    <option value="COM103">Wipro Digital</option>
+                    <option value="COM104">Zoho Corporation</option>
+                    <option value="COM105">Cognizant Interactive</option>
+                    <option value="COM106">Tech Mahindra</option>
+                  </select>
+                  <span class="form-hint">Company is required.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="jobCode">Job Code <span class="required">*</span></label>
+                  <input type="text" id="jobCode" name="jobCode" class="form-control" placeholder="JOB-2026-001" value="JOB-2026-001" required>
+                  <span class="form-hint">Job Code must be unique.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="jobTitle">Job Title <span class="required">*</span></label>
+                  <input type="text" id="jobTitle" name="jobTitle" class="form-control" placeholder="e.g. Software Engineer (Java)" value="Software Engineer (Java)" required>
+                  <span class="form-hint">Job Title is required.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="openings">Number of Openings <span class="required">*</span></label>
+                  <input type="number" id="openings" name="openings" class="form-control" placeholder="e.g. 25" min="1" value="25" required>
+                  <span class="form-hint">Number of openings must be greater than zero.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="empType">Employment Type <span class="required">*</span></label>
+                  <select id="empType" name="empType" class="form-control" required>
+                    <option value="Full-time" selected>Full-time (Permanent Trainee)</option>
+                    <option value="Internship">Internship + PPO</option>
+                    <option value="Contract">Fixed Term Contract</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="location">Job Location <span class="required">*</span></label>
+                  <input type="text" id="location" name="location" class="form-control" placeholder="e.g. Pune / Bengaluru" value="Pune, Maharashtra" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2: COMPENSATION -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <i class="fa-solid fa-indian-rupee-sign" style="color: var(--primary);"></i>
+                2. Compensation & CTC Band (INR Lakhs Per Annum)
+              </div>
+              <p class="form-section-desc">Offered salary structure across probationary and confirmed bands</p>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="minPkg">Minimum Package (LPA) <span class="required">*</span></label>
+                  <input type="number" id="minPkg" name="minPkg" class="form-control" placeholder="4.5" step="0.1" min="1.0" value="4.5" required>
+                  <span class="form-hint">Base floor package for selected freshers.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="maxPkg">Maximum Package (LPA) <span class="required">*</span></label>
+                  <input type="number" id="maxPkg" name="maxPkg" class="form-control" placeholder="7.5" step="0.1" min="1.0" value="7.5" required>
+                  <span class="form-hint">Minimum package cannot exceed maximum package.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 3: ELIGIBILITY CRITERIA -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <i class="fa-solid fa-clipboard-check" style="color: var(--primary);"></i>
+                3. Academic Eligibility Criteria & Rules
+              </div>
+              <p class="form-section-desc">Automated filter criteria applied against candidate academic registries</p>
+
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label class="form-label" for="eligQual">Eligible Qualifications <span class="required">*</span></label>
+                  <select id="eligQual" name="eligQual" class="form-control" required>
+                    <option value="BE / BTech" selected>BE / BTech (CS / IT / ECE)</option>
+                    <option value="MCA">MCA Only</option>
+                    <option value="BE, BTech, MCA">BE, BTech, and MCA</option>
+                    <option value="BCA / BSc">BCA / BSc Computer Science</option>
+                    <option value="All">All Degrees Eligible</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="minPercent">Minimum Percentage / CGPA (%) <span class="required">*</span></label>
+                  <input type="number" id="minPercent" name="minPercent" class="form-control" placeholder="60.0" step="0.1" min="0" max="100" value="65.0" required>
+                  <span class="form-hint">Candidate aggregate score cutoff.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="maxBacklogs">Maximum Allowed Backlogs <span class="required">*</span></label>
+                  <input type="number" id="maxBacklogs" name="maxBacklogs" class="form-control" placeholder="0" min="0" max="5" value="0" required>
+                  <span class="form-hint">Maximum allowable active backlogs.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="minPassYear">Minimum Passing Year <span class="required">*</span></label>
+                  <select id="minPassYear" name="minPassYear" class="form-control" required>
+                    <option value="2025">2025</option>
+                    <option value="2026" selected>2026</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="maxPassYear">Maximum Passing Year <span class="required">*</span></label>
+                  <select id="maxPassYear" name="maxPassYear" class="form-control" required>
+                    <option value="2026" selected>2026</option>
+                    <option value="2027">2027</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="expReq">Experience Required</label>
+                  <input type="text" id="expReq" name="expReq" class="form-control" placeholder="e.g. Fresher (0 years)" value="Fresher / 0-1 Year">
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 4: SKILLS -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <i class="fa-solid fa-code-branch" style="color: var(--primary);"></i>
+                4. Required Technical Stacks
+              </div>
+              <p class="form-section-desc">Key competency expectations for screening assessments</p>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="reqTech">Required Technology <span class="required">*</span></label>
+                  <select id="reqTech" name="reqTech" class="form-control" required>
+                    <option value="Java" selected>Java (Core & Advanced)</option>
+                    <option value="Python">Python</option>
+                    <option value="React">React</option>
+                    <option value="SQL">SQL & Database</option>
+                    <option value="FullStack">Full Stack Web</option>
+                  </select>
+                  <span class="form-hint">Required technology is mandatory.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="reqSkills">Auxiliary Skills & Libraries</label>
+                  <input type="text" id="reqSkills" name="reqSkills" class="form-control" placeholder="Spring Boot, REST, Hibernate, Git, PostgreSQL" value="Spring Boot, REST APIs, MySQL, Git">
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 5: IMPORTANT DATES -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <i class="fa-solid fa-calendar-days" style="color: var(--primary);"></i>
+                5. Important Drive Dates & Status
+              </div>
+              <p class="form-section-desc">Registration schedule and active publishing state</p>
+
+              <div class="form-grid-3">
+                <div class="form-group">
+                  <label class="form-label" for="postedDate">Drive Posted Date <span class="required">*</span></label>
+                  <input type="date" id="postedDate" name="postedDate" class="form-control" value="2026-10-20" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="deadline">Application Deadline <span class="required">*</span></label>
+                  <input type="date" id="deadline" name="deadline" class="form-control" value="2026-11-15" required>
+                  <span class="form-hint">Application deadline cannot be before posted date.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="jobStatus">Publishing Status <span class="required">*</span></label>
+                  <select id="jobStatus" name="jobStatus" class="form-control" required>
+                    <option value="DRAFT">DRAFT (Internal Review)</option>
+                    <option value="OPEN" selected>OPEN (Accepting Applications)</option>
+                    <option value="CLOSED">CLOSED (Registrations Closed)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+              <a href="jobs.html" class="btn btn-secondary">
+                <i class="fa-solid fa-xmark"></i> Cancel
+              </a>
+              <button type="submit" class="btn btn-outline">
+                <i class="fa-solid fa-arrows-rotate"></i> Update Job
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fa-solid fa-floppy-disk"></i> Save Job
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/app-live.js"></script>
+</body>
+</html>

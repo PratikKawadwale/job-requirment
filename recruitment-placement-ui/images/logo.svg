@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="rpmsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#rpmsGrad)" />
+  <!-- Academic Cap + Briefcase Fusion Emblem -->
+  <path d="M50 24 L78 37 L50 50 L22 37 Z" fill="#ffffff" />
+  <path d="M72 43.5 V58 C72 58 64 68 50 68 C36 68 28 58 28 58 V43.5 L50 54 Z" fill="#e0f2fe" opacity="0.9" />
+  <!-- Tassel -->
+  <path d="M78 37 V52 M76 52 H80 V57 H76 Z" stroke="#fcd34d" stroke-width="2.5" fill="#fcd34d" stroke-linecap="round" />
+  <!-- Briefcase Base -->
+  <rect x="36" y="66" width="28" height="18" rx="4" fill="#ffffff" />
+  <rect x="42" y="62" width="16" height="4" rx="2" fill="#ffffff" />
+  <path d="M36 72 H64" stroke="#2563eb" stroke-width="2" />
+  <rect x="47" y="70" width="6" height="4" rx="1" fill="#f59e0b" />
+</svg>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Recruitment & Placement Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Shared Sidebar Navigation -->
+  <aside class="app-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="brand-info">
+        <span class="brand-title">RPMS Portal</span>
+        <span class="brand-subtitle">Placement & Career</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Core Navigation</div>
+      <a href="dashboard.html" class="nav-item active">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="candidates.html" class="nav-item">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>Candidates</span>
+      </a>
+      <a href="companies.html" class="nav-item">
+        <i class="fa-solid fa-building"></i>
+        <span>Companies</span>
+      </a>
+      <a href="jobs.html" class="nav-item">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Jobs</span>
+      </a>
+      <a href="applications.html" class="nav-item">
+        <i class="fa-solid fa-file-signature"></i>
+        <span>Applications</span>
+      </a>
+      <a href="interviews.html" class="nav-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Interviews</span>
+      </a>
+      <a href="placement-process.html" class="nav-item">
+        <i class="fa-solid fa-stairs"></i>
+        <span>Placement Process</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Reports</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="login.html" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="app-main">
+
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('mobile-open')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="system-title-badge">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span class="portal-text">Recruitment & Placement Management System</span>
+          <span class="portal-tag">v2.4 Live</span>
+        </div>
+      </div>
+
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search candidate, job code, company...">
+      </div>
+
+      <div class="header-right">
+        <div class="notification-bell" title="3 Unread Notifications">
+          <i class="fa-regular fa-bell"></i>
+          <span class="bell-badge"></span>
+        </div>
+        <div class="user-profile-widget">
+          <div class="user-avatar">PO</div>
+          <div class="user-meta">
+            <span class="user-name">Pratik Sharma</span>
+            <span class="user-role">Placement Officer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="page-content">
+
+      <!-- Breadcrumbs & Header Actions -->
+      <div class="page-header">
+        <div>
+          <div class="breadcrumb">
+            <a href="dashboard.html"><i class="fa-solid fa-house"></i> Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <span class="current">Dashboard Overview</span>
+          </div>
+          <h1 class="page-title">Executive Placement Dashboard</h1>
+          <p class="page-subtitle">Academic Year 2025-2026 Recruitment Drive Performance & Lifecycle Analytics</p>
+        </div>
+
+        <div class="header-actions">
+          <a href="candidate-form.html" class="btn btn-primary">
+            <i class="fa-solid fa-user-plus"></i> Add Candidate
+          </a>
+          <a href="job-form.html" class="btn btn-secondary">
+            <i class="fa-solid fa-plus"></i> Post Job
+          </a>
+          <a href="reports.html" class="btn btn-outline">
+            <i class="fa-solid fa-file-export"></i> Analytics
+          </a>
+        </div>
+      </div>
+
+      <!-- 8 Required KPI Metric Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-info">
+            <h4>Total Candidates</h4>
+            <div class="kpi-number">2,450</div>
+            <div class="kpi-trend trend-up">
+              <i class="fa-solid fa-arrow-trend-up"></i> +12% from last season
+            </div>
+          </div>
+          <div class="kpi-icon">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+        </div>
+
+        <div class="kpi-card kpi-sky">
+          <div class="kpi-info">
+            <h4>Active Candidates</h4>
+            <div class="kpi-number">2,180</div>
+            <div class="kpi-trend trend-up">
+              <i class="fa-solid fa-circle-check"></i> 89% eligible pool
+            </div>
+          </div>
+          <div class="kpi-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+        </div>
+
+        <div class="kpi-card kpi-purple">
+          <div class="kpi-info">
+            <h4>Total Companies</h4>
+            <div class="kpi-number">125</div>
+            <div class="kpi-trend trend-up">
+              <i class="fa-solid fa-arrow-trend-up"></i> +18 partner firms
+            </div>
+          </div>
+          <div class="kpi-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+        </div>
+
+        <div class="kpi-card kpi-orange">
+          <div class="kpi-info">
+            <h4>Open Jobs</h4>
+            <div class="kpi-number">28</div>
+            <div class="kpi-trend trend-muted">
+              <i class="fa-solid fa-clock"></i> 142 total openings
+            </div>
+          </div>
+          <div class="kpi-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+        </div>
+
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-info">
+            <h4>Total Applications</h4>
+            <div class="kpi-number">1,200</div>
+            <div class="kpi-trend trend-up">
+              <i class="fa-solid fa-arrow-trend-up"></i> 85 today
+            </div>
+          </div>
+          <div class="kpi-icon">
+            <i class="fa-solid fa-file-invoice"></i>
+          </div>
+        </div>
+
+        <div class="kpi-card kpi-orange">
+          <div class="kpi-info">
+            <h4>Interviews</h4>
+            <div class="kpi-number">480</div>
+            <div class="kpi-trend trend-muted">
+              <i class="fa-solid fa-calendar-day"></i> 24 this week
+            </div>
+          </div>
+          <div class="kpi-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+        </div>
+
+        <div class="kpi-card kpi-green">
+          <div class="kpi-info">
+            <h4>Selected Candidates</h4>
+            <div class="kpi-number">210</div>
+            <div class="kpi-trend trend-up">
+              <i class="fa-solid fa-check-double"></i> 43.7% selection rate
+            </div>
+          </div>
+          <div class="kpi-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+        </div>
+
+        <div class="kpi-card kpi-green">
+          <div class="kpi-info">
+            <h4>Placed Candidates</h4>
+            <div class="kpi-number">175</div>
+            <div class="kpi-trend trend-up">
+              <i class="fa-solid fa-circle-check"></i> 83.3% joined
+            </div>
+          </div>
+          <div class="kpi-icon">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions Grid -->
+      <div class="card" style="margin-bottom: 1.75rem;">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-bolt"></i> Quick Actions
+          </div>
+          <span class="card-subtitle">Frequently accessed administrative shortcuts</span>
+        </div>
+        <div class="card-body">
+          <div class="quick-actions-grid">
+            <a href="candidate-form.html" class="quick-action-btn">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Add Candidate</span>
+            </a>
+            <a href="companies.html" class="quick-action-btn">
+              <i class="fa-solid fa-building-circle-check"></i>
+              <span>Add Company</span>
+            </a>
+            <a href="job-form.html" class="quick-action-btn">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Create Job</span>
+            </a>
+            <a href="applications.html" class="quick-action-btn">
+              <i class="fa-solid fa-file-signature"></i>
+              <span>View Applications</span>
+            </a>
+            <a href="interviews.html" class="quick-action-btn">
+              <i class="fa-solid fa-calendar-plus"></i>
+              <span>Schedule Interview</span>
+            </a>
+            <a href="reports.html" class="quick-action-btn">
+              <i class="fa-solid fa-chart-pie"></i>
+              <span>View Reports</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recruitment Funnel Section -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-filter"></i> Complete Recruitment Funnel Pipeline
+          </div>
+          <span class="card-subtitle">End-to-end recruitment lifecycle conversion metrics</span>
+        </div>
+        <div class="card-body">
+          <div class="funnel-container">
+            <div class="funnel-step">
+              <span class="funnel-count">1,200</span>
+              <span class="funnel-label">Applications</span>
+              <div class="progress-container"><div class="progress-bar" style="width: 100%;"></div></div>
+            </div>
+            <div class="funnel-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+            <div class="funnel-step">
+              <span class="funnel-count">760</span>
+              <span class="funnel-label">Shortlisted</span>
+              <div class="progress-container"><div class="progress-bar progress-bar-sky" style="width: 63.3%;"></div></div>
+            </div>
+            <div class="funnel-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+            <div class="funnel-step">
+              <span class="funnel-count">480</span>
+              <span class="funnel-label">Interviewed</span>
+              <div class="progress-container"><div class="progress-bar progress-bar-warning" style="width: 40%;"></div></div>
+            </div>
+            <div class="funnel-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+            <div class="funnel-step">
+              <span class="funnel-count">210</span>
+              <span class="funnel-label">Selected</span>
+              <div class="progress-container"><div class="progress-bar progress-bar-success" style="width: 17.5%;"></div></div>
+            </div>
+            <div class="funnel-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+            <div class="funnel-step active">
+              <span class="funnel-count" style="color: var(--success);">175</span>
+              <span class="funnel-label" style="color: var(--primary);">Joined</span>
+              <div class="progress-container"><div class="progress-bar progress-bar-success" style="width: 14.5%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2-Column Split: Upcoming Interviews & Recent Job Openings -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 1.5rem; margin-bottom: 1.75rem;">
+        
+        <!-- Upcoming Interviews -->
+        <div class="card" style="margin-bottom: 0;">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fa-solid fa-calendar-days"></i> Upcoming Interviews
+            </div>
+            <a href="interviews.html" class="btn btn-sm btn-outline">View All</a>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Candidate</th>
+                    <th>Company</th>
+                    <th>Round</th>
+                    <th>Date & Time</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="candidate-name-cell">
+                        <div class="candidate-avatar-sm">AS</div>
+                        <div>
+                          <div class="text-strong">Aarav Sharma</div>
+                          <div class="sub-meta">CAN1001 • Java</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Tata Consultancy Services</td>
+                    <td><span class="badge badge-interview">Technical</span></td>
+                    <td>2026-11-02 <br><span class="sub-meta">10:30 AM</span></td>
+                    <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="candidate-name-cell">
+                        <div class="candidate-avatar-sm">PP</div>
+                        <div>
+                          <div class="text-strong">Priya Patel</div>
+                          <div class="sub-meta">CAN1002 • Python</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Infosys Technologies</td>
+                    <td><span class="badge badge-interview">Managerial</span></td>
+                    <td>2026-11-02 <br><span class="sub-meta">02:00 PM</span></td>
+                    <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="candidate-name-cell">
+                        <div class="candidate-avatar-sm">RV</div>
+                        <div>
+                          <div class="text-strong">Rahul Verma</div>
+                          <div class="sub-meta">CAN1003 • React</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Wipro Digital</td>
+                    <td><span class="badge badge-applied">HR Round</span></td>
+                    <td>2026-11-03 <br><span class="sub-meta">11:15 AM</span></td>
+                    <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="candidate-name-cell">
+                        <div class="candidate-avatar-sm">AI</div>
+                        <div>
+                          <div class="text-strong">Ananya Iyer</div>
+                          <div class="sub-meta">CAN1004 • Full Stack</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Zoho Corporation</td>
+                    <td><span class="badge badge-interview">System Design</span></td>
+                    <td>2026-11-03 <br><span class="sub-meta">03:30 PM</span></td>
+                    <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Job Openings -->
+        <div class="card" style="margin-bottom: 0;">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fa-solid fa-briefcase"></i> Recent Job Openings
+            </div>
+            <a href="jobs.html" class="btn btn-sm btn-outline">View All Jobs</a>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Job Code</th>
+                    <th>Job Role</th>
+                    <th>Company</th>
+                    <th>Package</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="text-strong">JOB-2026-001</span></td>
+                    <td>Software Engineer (Java)</td>
+                    <td>Tata Consultancy Services</td>
+                    <td>4.5 - 7.5 LPA</td>
+                    <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-strong">JOB-2026-002</span></td>
+                    <td>Associate Developer (Python)</td>
+                    <td>Infosys Technologies</td>
+                    <td>4.2 - 6.8 LPA</td>
+                    <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-strong">JOB-2026-003</span></td>
+                    <td>Frontend Specialist (React)</td>
+                    <td>Wipro Digital</td>
+                    <td>5.0 - 8.5 LPA</td>
+                    <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-strong">JOB-2026-004</span></td>
+                    <td>Full Stack Engineer</td>
+                    <td>Zoho Corporation</td>
+                    <td>6.0 - 10.0 LPA</td>
+                    <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 2-Column Split: Recent Placements & Recent Applications -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 1.5rem;">
+        
+        <!-- Recent Placements -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fa-solid fa-trophy" style="color: #f59e0b;"></i> Recent Star Placements
+            </div>
+            <a href="placement-process.html" class="btn btn-sm btn-outline">Placement Board</a>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Candidate</th>
+                    <th>Company</th>
+                    <th>Designation</th>
+                    <th>Package</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="candidate-name-cell">
+                        <div class="candidate-avatar-sm" style="background-color: var(--success-bg); color: var(--success);">RD</div>
+                        <div>
+                          <div class="text-strong">Rohan Deshmukh</div>
+                          <div class="sub-meta">B.Tech CS • 2026</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Zoho Corporation</td>
+                    <td>Software Developer</td>
+                    <td><strong style="color: var(--success);">10.0 LPA</strong></td>
+                    <td><span class="badge badge-placed"><span class="badge-dot"></span>PLACED</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="candidate-name-cell">
+                        <div class="candidate-avatar-sm" style="background-color: var(--success-bg); color: var(--success);">SK</div>
+                        <div>
+                          <div class="text-strong">Sneha Kulkarni</div>
+                          <div class="sub-meta">MCA • 2026</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Tata Consultancy Services</td>
+                    <td>Systems Engineer</td>
+                    <td><strong style="color: var(--success);">7.2 LPA</strong></td>
+                    <td><span class="badge badge-joined"><span class="badge-dot"></span>JOINED</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="candidate-name-cell">
+                        <div class="candidate-avatar-sm" style="background-color: var(--success-bg); color: var(--success);">VN</div>
+                        <div>
+                          <div class="text-strong">Vikram Nair</div>
+                          <div class="sub-meta">B.Tech IT • 2026</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Tech Mahindra</td>
+                    <td>Cloud Associate</td>
+                    <td><strong style="color: var(--success);">6.5 LPA</strong></td>
+                    <td><span class="badge badge-joined"><span class="badge-dot"></span>JOINED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Applications -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fa-solid fa-inbox"></i> Recent Applications
+            </div>
+            <a href="applications.html" class="btn btn-sm btn-outline">View All (1,200)</a>
+          </div>
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>App ID</th>
+                    <th>Candidate</th>
+                    <th>Job Title</th>
+                    <th>Applied</th>
+                    <th>Stage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="text-strong">APP1001</span></td>
+                    <td>Aarav Sharma</td>
+                    <td>Software Engineer</td>
+                    <td>2026-10-25</td>
+                    <td><span class="badge badge-interview"><span class="badge-dot"></span>INTERVIEW</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-strong">APP1002</span></td>
+                    <td>Priya Patel</td>
+                    <td>Associate Developer</td>
+                    <td>2026-10-25</td>
+                    <td><span class="badge badge-interview"><span class="badge-dot"></span>INTERVIEW</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-strong">APP1003</span></td>
+                    <td>Rahul Verma</td>
+                    <td>Frontend Specialist</td>
+                    <td>2026-10-26</td>
+                    <td><span class="badge badge-shortlisted"><span class="badge-dot"></span>SHORTLISTED</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-strong">APP1004</span></td>
+                    <td>Pooja Gupta</td>
+                    <td>QA Automation</td>
+                    <td>2026-10-27</td>
+                    <td><span class="badge badge-applied"><span class="badge-dot"></span>APPLIED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/app-live.js"></script>
+</body>
+</html>

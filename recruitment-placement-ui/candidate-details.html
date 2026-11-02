@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Profile: Aarav Sharma (CAN1001) - RPMS Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="app-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="brand-info">
+        <span class="brand-title">RPMS Portal</span>
+        <span class="brand-subtitle">Placement & Career</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Core Navigation</div>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="candidates.html" class="nav-item active">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>Candidates</span>
+      </a>
+      <a href="companies.html" class="nav-item">
+        <i class="fa-solid fa-building"></i>
+        <span>Companies</span>
+      </a>
+      <a href="jobs.html" class="nav-item">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Jobs</span>
+      </a>
+      <a href="applications.html" class="nav-item">
+        <i class="fa-solid fa-file-signature"></i>
+        <span>Applications</span>
+      </a>
+      <a href="interviews.html" class="nav-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Interviews</span>
+      </a>
+      <a href="placement-process.html" class="nav-item">
+        <i class="fa-solid fa-stairs"></i>
+        <span>Placement Process</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Reports</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="app-main">
+
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('mobile-open')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="system-title-badge">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span class="portal-text">Recruitment & Placement Management System</span>
+        </div>
+      </div>
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search candidate records...">
+      </div>
+      <div class="header-right">
+        <div class="notification-bell">
+          <i class="fa-regular fa-bell"></i>
+          <span class="bell-badge"></span>
+        </div>
+        <div class="user-profile-widget">
+          <div class="user-avatar">PO</div>
+          <div class="user-meta">
+            <span class="user-name">Pratik Sharma</span>
+            <span class="user-role">Placement Officer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="page-content">
+
+      <!-- Breadcrumbs & Header -->
+      <div class="page-header">
+        <div>
+          <div class="breadcrumb">
+            <a href="dashboard.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <a href="candidates.html">Candidates</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <span class="current">CAN1001 Details</span>
+          </div>
+          <h1 class="page-title">Candidate Profile dossier</h1>
+          <p class="page-subtitle">Academic profile, verified credentials, drive attendance, and placement trail</p>
+        </div>
+        <div class="header-actions">
+          <a href="candidate-form.html" class="btn btn-primary">
+            <i class="fa-solid fa-user-pen"></i> Edit Candidate
+          </a>
+          <a href="candidates.html" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Back to Candidates
+          </a>
+        </div>
+      </div>
+
+      <!-- Candidate Hero Banner Card -->
+      <div class="candidate-hero">
+        <div class="candidate-hero-left">
+          <div class="candidate-hero-avatar">AS</div>
+          <div class="candidate-hero-meta">
+            <h2>
+              Aarav Sharma
+              <span class="badge badge-active" style="background:#ffffff; color:#16a34a; font-size:0.75rem;">
+                <span class="badge-dot"></span> ACTIVE
+              </span>
+            </h2>
+            <div class="candidate-hero-contacts">
+              <span><i class="fa-solid fa-id-card"></i> Candidate ID: <strong>CAN1001</strong></span>
+              <span><i class="fa-solid fa-envelope"></i> aarav.sharma@example.in</span>
+              <span><i class="fa-solid fa-phone"></i> +91 98230 11234</span>
+              <span><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="interviews.html" class="btn btn-sm" style="background: rgba(255,255,255,0.2); color:#ffffff; border:1px solid rgba(255,255,255,0.4);">
+            <i class="fa-solid fa-calendar-plus"></i> Schedule Interview
+          </a>
+        </div>
+      </div>
+
+      <!-- 2-Column Split: Academic & Personal Information -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem; margin-bottom: 1.75rem;">
+        
+        <!-- Academic Information Card -->
+        <div class="card" style="margin-bottom: 0;">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fa-solid fa-graduation-cap"></i> Academic Credentials
+            </div>
+            <span class="badge badge-active"><i class="fa-solid fa-check"></i> Verified</span>
+          </div>
+          <div class="card-body">
+            <div class="info-list-grid">
+              <div class="info-item">
+                <label>Degree / Qualification</label>
+                <p>BE (Computer Engineering)</p>
+              </div>
+              <div class="info-item">
+                <label>Graduation Year</label>
+                <p>2026 (Final Year)</p>
+              </div>
+              <div class="info-item">
+                <label>Aggregate Score</label>
+                <p><span style="color: var(--success); font-size: 1.15rem; font-weight:800;">84.5%</span> (8.89 CGPA)</p>
+              </div>
+              <div class="info-item">
+                <label>Backlog Count</label>
+                <p><span style="color: var(--success); font-weight:700;">0 Active</span> (Clear Track)</p>
+              </div>
+              <div class="info-item" style="grid-column: 1 / -1;">
+                <label>Institute / College</label>
+                <p>Pune Institute of Computer Technology (PICT)</p>
+              </div>
+              <div class="info-item" style="grid-column: 1 / -1;">
+                <label>Affiliated University</label>
+                <p>Savitribai Phule Pune University (SPPU)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal & Location Preferences -->
+        <div class="card" style="margin-bottom: 0;">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fa-regular fa-address-card"></i> Personal & Placement Preferences
+            </div>
+            <span class="badge badge-open">Open for Placement</span>
+          </div>
+          <div class="card-body">
+            <div class="info-list-grid">
+              <div class="info-item">
+                <label>Date of Birth</label>
+                <p>14 May 2003 (Age 23)</p>
+              </div>
+              <div class="info-item">
+                <label>Gender</label>
+                <p>Male</p>
+              </div>
+              <div class="info-item">
+                <label>Current City</label>
+                <p>Pune, Maharashtra</p>
+              </div>
+              <div class="info-item">
+                <label>Profile Status</label>
+                <p><span class="badge badge-active"><span class="badge-dot"></span>ACTIVE</span></p>
+              </div>
+              <div class="info-item" style="grid-column: 1 / -1;">
+                <label>Preferred Placement Locations</label>
+                <p>Pune, Bengaluru, Mumbai, Hyderabad (Willing to Relocate)</p>
+              </div>
+              <div class="info-item" style="grid-column: 1 / -1;">
+                <label>Notice Period / Availability</label>
+                <p>Immediate Joiner upon graduation (July 2026)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Skills Section -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-laptop-code"></i> Skills & Technical Competencies
+          </div>
+          <span class="card-subtitle">Primary & auxiliary development proficiencies</span>
+        </div>
+        <div class="card-body">
+          <div style="margin-bottom: 1.25rem;">
+            <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 0.5rem;">Primary Specialization (Advanced)</label>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="skill-pill" style="background:#dbeafe; color:#1e40af; padding: 0.4rem 0.85rem; font-size: 0.85rem; font-weight: 700;">
+                <i class="fa-brands fa-java"></i> Java 17/21
+              </span>
+              <span class="skill-pill" style="background:#dbeafe; color:#1e40af; padding: 0.4rem 0.85rem; font-size: 0.85rem; font-weight: 700;">
+                <i class="fa-solid fa-leaf"></i> Spring Boot & Microservices
+              </span>
+              <span class="skill-pill" style="background:#dbeafe; color:#1e40af; padding: 0.4rem 0.85rem; font-size: 0.85rem; font-weight: 700;">
+                <i class="fa-solid fa-database"></i> SQL / PostgreSQL / MySQL
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block; margin-bottom: 0.5rem;">Secondary & Supporting Tooling</label>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="skill-pill">RESTful API Design</span>
+              <span class="skill-pill">Hibernate JPA</span>
+              <span class="skill-pill">Git & GitHub</span>
+              <span class="skill-pill">Docker Basics</span>
+              <span class="skill-pill">HTML5 / CSS3</span>
+              <span class="skill-pill">Postman API Testing</span>
+              <span class="skill-pill">JUnit & Mockito</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Applications History Table -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-clock-rotate-left"></i> Job Applications History
+          </div>
+          <span class="card-subtitle">Active and past campus recruitment submissions</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Application ID</th>
+                  <th>Company</th>
+                  <th>Job Title</th>
+                  <th>Applied Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text-strong">APP1001</span></td>
+                  <td><strong>Tata Consultancy Services</strong></td>
+                  <td>Software Engineer (Java/Cloud)</td>
+                  <td>2026-10-25</td>
+                  <td><span class="badge badge-interview"><span class="badge-dot"></span>INTERVIEW</span></td>
+                  <td><a href="interviews.html" class="btn btn-sm btn-outline">Track Round</a></td>
+                </tr>
+                <tr>
+                  <td><span class="text-strong">APP1009</span></td>
+                  <td><strong>Cognizant Interactive</strong></td>
+                  <td>Programmer Analyst Trainee</td>
+                  <td>2026-10-20</td>
+                  <td><span class="badge badge-shortlisted"><span class="badge-dot"></span>SHORTLISTED</span></td>
+                  <td><a href="applications.html" class="btn btn-sm btn-secondary">Details</a></td>
+                </tr>
+                <tr>
+                  <td><span class="text-strong">APP1014</span></td>
+                  <td><strong>Wipro Digital</strong></td>
+                  <td>Project Engineer</td>
+                  <td>2026-10-14</td>
+                  <td><span class="badge badge-eligible"><span class="badge-dot"></span>ELIGIBLE</span></td>
+                  <td><a href="applications.html" class="btn btn-sm btn-secondary">Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interview History Table -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-user-tie"></i> Interview History & Performance
+          </div>
+          <span class="card-subtitle">Technical, managerial, and culture fit rounds</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Interview ID</th>
+                  <th>Company</th>
+                  <th>Round</th>
+                  <th>Interview Date</th>
+                  <th>Result</th>
+                  <th>Feedback Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text-strong">INT1001</span></td>
+                  <td>Tata Consultancy Services</td>
+                  <td><span class="badge badge-interview">Technical Round 1</span></td>
+                  <td>2026-11-02 (Scheduled)</td>
+                  <td><span class="badge badge-scheduled"><span class="badge-dot"></span>SCHEDULED</span></td>
+                  <td><span class="sub-meta">Scheduled with Sr. Architect Rajesh Menon</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-strong">INT0988</span></td>
+                  <td>Cognizant Interactive</td>
+                  <td><span class="badge badge-interview">Online Coding Round</span></td>
+                  <td>2026-10-22</td>
+                  <td><span class="badge badge-selected"><span class="badge-dot"></span>CLEARED</span></td>
+                  <td>Solved 2/2 DSA problems within 45 mins. Score: 100/100.</td>
+                </tr>
+                <tr>
+                  <td><span class="text-strong">INT0975</span></td>
+                  <td>Infosys Technologies</td>
+                  <td><span class="badge badge-applied">Aptitude & Reasoning</span></td>
+                  <td>2026-10-18</td>
+                  <td><span class="badge badge-selected"><span class="badge-dot"></span>CLEARED</span></td>
+                  <td>Quantitative: 92%, Verbal: 88%, Analytical: 90%.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offer and Placement History Section -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-award" style="color: #f59e0b;"></i> Offer & Final Placement Dossier
+          </div>
+          <span class="card-subtitle">Formal letters of intent and institutional joining status</span>
+        </div>
+        <div class="card-body">
+          <div style="background-color: #f8fafc; border: 1px dashed var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <span class="badge badge-offered" style="margin-bottom: 0.5rem;"><span class="badge-dot"></span>OFFER PENDING REVIEW</span>
+                <h3 style="font-size: 1.15rem; color: var(--text-main);">Software Engineer Trainee - Tata Consultancy Services</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
+                  Designation: <strong>Associate Software Developer</strong> • Package: <strong style="color: var(--success); font-size: 1.05rem;">7.0 LPA CTC</strong>
+                </p>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Offer Status: <span class="badge badge-applied">STAGE 3 EVALUATION</span></div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">Expected Joining: <strong>July 2026</strong></div>
+                <a href="placement-process.html" class="btn btn-sm btn-primary" style="margin-top: 0.5rem;">
+                  <i class="fa-solid fa-file-contract"></i> Open Placement Workflow
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/app-live.js"></script>
+</body>
+</html>

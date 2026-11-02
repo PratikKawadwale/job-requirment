@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Partners & Companies - RPMS Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="app-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="brand-info">
+        <span class="brand-title">RPMS Portal</span>
+        <span class="brand-subtitle">Placement & Career</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Core Navigation</div>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="candidates.html" class="nav-item">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>Candidates</span>
+      </a>
+      <a href="companies.html" class="nav-item active">
+        <i class="fa-solid fa-building"></i>
+        <span>Companies</span>
+      </a>
+      <a href="jobs.html" class="nav-item">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Jobs</span>
+      </a>
+      <a href="applications.html" class="nav-item">
+        <i class="fa-solid fa-file-signature"></i>
+        <span>Applications</span>
+      </a>
+      <a href="interviews.html" class="nav-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Interviews</span>
+      </a>
+      <a href="placement-process.html" class="nav-item">
+        <i class="fa-solid fa-stairs"></i>
+        <span>Placement Process</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Reports</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="app-main">
+
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('mobile-open')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="system-title-badge">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span class="portal-text">Recruitment & Placement Management System</span>
+        </div>
+      </div>
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search partner companies...">
+      </div>
+      <div class="header-right">
+        <div class="notification-bell">
+          <i class="fa-regular fa-bell"></i>
+          <span class="bell-badge"></span>
+        </div>
+        <div class="user-profile-widget">
+          <div class="user-avatar">PO</div>
+          <div class="user-meta">
+            <span class="user-name">Pratik Sharma</span>
+            <span class="user-role">Placement Officer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="page-content">
+
+      <!-- Breadcrumbs & Header -->
+      <div class="page-header">
+        <div>
+          <div class="breadcrumb">
+            <a href="dashboard.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <span class="current">Company Management</span>
+          </div>
+          <h1 class="page-title">Corporate Partner Management</h1>
+          <p class="page-subtitle">Manage empanelled hiring partners, recruiter profiles, and active campus drives</p>
+        </div>
+        <div class="header-actions">
+          <a href="#companyRegistrationCard" class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i> Add New Company
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick KPI Strip -->
+      <div class="kpi-grid" style="margin-bottom: 1.5rem;">
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-info">
+            <h4>Total Empanelled</h4>
+            <div class="kpi-number">125</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-building"></i></div>
+        </div>
+        <div class="kpi-card kpi-green">
+          <div class="kpi-info">
+            <h4>Active Drives</h4>
+            <div class="kpi-number">28</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-briefcase"></i></div>
+        </div>
+        <div class="kpi-card kpi-sky">
+          <div class="kpi-info">
+            <h4>MNC Partners</h4>
+            <div class="kpi-number">64</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-globe"></i></div>
+        </div>
+        <div class="kpi-card kpi-purple">
+          <div class="kpi-info">
+            <h4>SaaS & Startups</h4>
+            <div class="kpi-number">42</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-rocket"></i></div>
+        </div>
+      </div>
+
+      <!-- Company Search Filters -->
+      <div class="filter-card">
+        <form action="#" method="get">
+          <div class="form-grid-4">
+            <div class="form-group">
+              <label class="form-label" for="search-comp-id">Company ID</label>
+              <input type="text" id="search-comp-id" class="form-control" placeholder="e.g. COM101">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="search-comp-name">Company Name</label>
+              <input type="text" id="search-comp-name" class="form-control" placeholder="e.g. Tata Consultancy">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="search-comp-type">Company Type</label>
+              <select id="search-comp-type" class="form-control">
+                <option value="">All Types</option>
+                <option value="MNC">MNC</option>
+                <option value="Startup">Startup</option>
+                <option value="Mid-size">Mid-size</option>
+                <option value="Consultancy">Consultancy</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="search-comp-status">Status</label>
+              <select id="search-comp-status" class="form-control">
+                <option value="">All Statuses</option>
+                <option value="ACTIVE">ACTIVE</option>
+                <option value="INACTIVE">INACTIVE</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-actions">
+            <button type="reset" class="btn btn-secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Search Companies</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Company Table with 6 Sample Companies -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-building-user"></i> Empanelled Corporate Partners (Showing 6 of 125)
+          </div>
+          <span class="card-subtitle">Click company name or open jobs to inspect active job mandates</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Company ID</th>
+                  <th>Company Name</th>
+                  <th>Industry / Domain</th>
+                  <th>HQ Location</th>
+                  <th>HR Primary Contact</th>
+                  <th>Status</th>
+                  <th>Open Jobs</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong style="color: var(--primary);">COM101</strong></td>
+                  <td>
+                    <a href="jobs.html" class="text-strong" style="color: var(--text-main); font-size: 0.95rem;">
+                      <i class="fa-solid fa-building" style="color: var(--primary); margin-right: 0.35rem;"></i> Tata Consultancy Services
+                    </a>
+                    <div class="sub-meta"><a href="https://tcs.com" target="_blank" style="color: var(--text-muted);"><i class="fa-solid fa-globe"></i> tcs.com</a></div>
+                  </td>
+                  <td><span class="skill-pill">IT Services & Consulting</span></td>
+                  <td>Mumbai, Maharashtra</td>
+                  <td>
+                    <div class="text-strong">Rajesh Menon</div>
+                    <div class="sub-meta"><i class="fa-solid fa-envelope"></i> hr@tcs.example.com</div>
+                    <div class="sub-meta"><i class="fa-solid fa-phone"></i> +91 22 6778 1000</div>
+                  </td>
+                  <td><span class="badge badge-active"><span class="badge-dot"></span>ACTIVE</span></td>
+                  <td>
+                    <a href="jobs.html" class="badge badge-interview" style="font-size: 0.8rem; text-decoration: none;">
+                      <i class="fa-solid fa-briefcase"></i> 6 Jobs Active
+                    </a>
+                  </td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="jobs.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-eye"></i> View Jobs</a>
+                      <a href="#companyRegistrationCard" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen"></i> Edit</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong style="color: var(--primary);">COM102</strong></td>
+                  <td>
+                    <a href="jobs.html" class="text-strong" style="color: var(--text-main); font-size: 0.95rem;">
+                      <i class="fa-solid fa-building" style="color: var(--primary); margin-right: 0.35rem;"></i> Infosys Technologies
+                    </a>
+                    <div class="sub-meta"><a href="https://infosys.com" target="_blank" style="color: var(--text-muted);"><i class="fa-solid fa-globe"></i> infosys.com</a></div>
+                  </td>
+                  <td><span class="skill-pill">Enterprise Software & Cloud</span></td>
+                  <td>Bengaluru, Karnataka</td>
+                  <td>
+                    <div class="text-strong">Shalini Rao</div>
+                    <div class="sub-meta"><i class="fa-solid fa-envelope"></i> recruitment@infosys.example.com</div>
+                    <div class="sub-meta"><i class="fa-solid fa-phone"></i> +91 80 2852 0261</div>
+                  </td>
+                  <td><span class="badge badge-active"><span class="badge-dot"></span>ACTIVE</span></td>
+                  <td>
+                    <a href="jobs.html" class="badge badge-interview" style="font-size: 0.8rem; text-decoration: none;">
+                      <i class="fa-solid fa-briefcase"></i> 5 Jobs Active
+                    </a>
+                  </td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="jobs.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-eye"></i> View Jobs</a>
+                      <a href="#companyRegistrationCard" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen"></i> Edit</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong style="color: var(--primary);">COM103</strong></td>
+                  <td>
+                    <a href="jobs.html" class="text-strong" style="color: var(--text-main); font-size: 0.95rem;">
+                      <i class="fa-solid fa-building" style="color: var(--primary); margin-right: 0.35rem;"></i> Wipro Digital
+                    </a>
+                    <div class="sub-meta"><a href="https://wipro.com" target="_blank" style="color: var(--text-muted);"><i class="fa-solid fa-globe"></i> wipro.com</a></div>
+                  </td>
+                  <td><span class="skill-pill">Digital Transformation & AI</span></td>
+                  <td>Bengaluru, Karnataka</td>
+                  <td>
+                    <div class="text-strong">Amitav Bose</div>
+                    <div class="sub-meta"><i class="fa-solid fa-envelope"></i> campus@wipro.example.com</div>
+                    <div class="sub-meta"><i class="fa-solid fa-phone"></i> +91 80 2844 0011</div>
+                  </td>
+                  <td><span class="badge badge-active"><span class="badge-dot"></span>ACTIVE</span></td>
+                  <td>
+                    <a href="jobs.html" class="badge badge-interview" style="font-size: 0.8rem; text-decoration: none;">
+                      <i class="fa-solid fa-briefcase"></i> 4 Jobs Active
+                    </a>
+                  </td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="jobs.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-eye"></i> View Jobs</a>
+                      <a href="#companyRegistrationCard" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen"></i> Edit</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong style="color: var(--primary);">COM104</strong></td>
+                  <td>
+                    <a href="jobs.html" class="text-strong" style="color: var(--text-main); font-size: 0.95rem;">
+                      <i class="fa-solid fa-building" style="color: var(--primary); margin-right: 0.35rem;"></i> Zoho Corporation
+                    </a>
+                    <div class="sub-meta"><a href="https://zohocorp.com" target="_blank" style="color: var(--text-muted);"><i class="fa-solid fa-globe"></i> zohocorp.com</a></div>
+                  </td>
+                  <td><span class="skill-pill">SaaS Product Development</span></td>
+                  <td>Chennai, Tamil Nadu</td>
+                  <td>
+                    <div class="text-strong">Karthik Sundaram</div>
+                    <div class="sub-meta"><i class="fa-solid fa-envelope"></i> talent@zohocorp.example.com</div>
+                    <div class="sub-meta"><i class="fa-solid fa-phone"></i> +91 44 6744 7070</div>
+                  </td>
+                  <td><span class="badge badge-active"><span class="badge-dot"></span>ACTIVE</span></td>
+                  <td>
+                    <a href="jobs.html" class="badge badge-interview" style="font-size: 0.8rem; text-decoration: none;">
+                      <i class="fa-solid fa-briefcase"></i> 5 Jobs Active
+                    </a>
+                  </td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="jobs.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-eye"></i> View Jobs</a>
+                      <a href="#companyRegistrationCard" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen"></i> Edit</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong style="color: var(--primary);">COM105</strong></td>
+                  <td>
+                    <a href="jobs.html" class="text-strong" style="color: var(--text-main); font-size: 0.95rem;">
+                      <i class="fa-solid fa-building" style="color: var(--primary); margin-right: 0.35rem;"></i> Cognizant Interactive
+                    </a>
+                    <div class="sub-meta"><a href="https://cognizant.com" target="_blank" style="color: var(--text-muted);"><i class="fa-solid fa-globe"></i> cognizant.com</a></div>
+                  </td>
+                  <td><span class="skill-pill">IT & Business Solutions</span></td>
+                  <td>Hyderabad, Telangana</td>
+                  <td>
+                    <div class="text-strong">Neha Kapoor</div>
+                    <div class="sub-meta"><i class="fa-solid fa-envelope"></i> campus.in@cognizant.example.com</div>
+                    <div class="sub-meta"><i class="fa-solid fa-phone"></i> +91 40 4848 9000</div>
+                  </td>
+                  <td><span class="badge badge-active"><span class="badge-dot"></span>ACTIVE</span></td>
+                  <td>
+                    <a href="jobs.html" class="badge badge-interview" style="font-size: 0.8rem; text-decoration: none;">
+                      <i class="fa-solid fa-briefcase"></i> 4 Jobs Active
+                    </a>
+                  </td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="jobs.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-eye"></i> View Jobs</a>
+                      <a href="#companyRegistrationCard" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen"></i> Edit</a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><strong style="color: var(--primary);">COM106</strong></td>
+                  <td>
+                    <a href="jobs.html" class="text-strong" style="color: var(--text-main); font-size: 0.95rem;">
+                      <i class="fa-solid fa-building" style="color: var(--primary); margin-right: 0.35rem;"></i> Tech Mahindra
+                    </a>
+                    <div class="sub-meta"><a href="https://techmahindra.com" target="_blank" style="color: var(--text-muted);"><i class="fa-solid fa-globe"></i> techmahindra.com</a></div>
+                  </td>
+                  <td><span class="skill-pill">Telecom & Network Cloud</span></td>
+                  <td>Pune, Maharashtra</td>
+                  <td>
+                    <div class="text-strong">Sunil Kulkarni</div>
+                    <div class="sub-meta"><i class="fa-solid fa-envelope"></i> hiring@techmahindra.example.com</div>
+                    <div class="sub-meta"><i class="fa-solid fa-phone"></i> +91 20 6601 8100</div>
+                  </td>
+                  <td><span class="badge badge-active"><span class="badge-dot"></span>ACTIVE</span></td>
+                  <td>
+                    <a href="jobs.html" class="badge badge-interview" style="font-size: 0.8rem; text-decoration: none;">
+                      <i class="fa-solid fa-briefcase"></i> 4 Jobs Active
+                    </a>
+                  </td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="jobs.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-eye"></i> View Jobs</a>
+                      <a href="#companyRegistrationCard" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen"></i> Edit</a>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company Registration / Edit Form Section -->
+      <div class="card" id="companyRegistrationCard">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-building-circle-check"></i> Empanel New Corporate Partner
+          </div>
+          <span class="card-subtitle">Register recruitment partner contact credentials</span>
+        </div>
+        <div class="card-body">
+          <form action="#" method="get" onsubmit="alert('Company record successfully saved!'); return false;">
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label class="form-label" for="comp-name">Company Name <span class="required">*</span></label>
+                <input type="text" id="comp-name" class="form-control" placeholder="e.g. Tata Consultancy Services" value="Tata Consultancy Services" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="comp-industry">Industry / Domain <span class="required">*</span></label>
+                <input type="text" id="comp-industry" class="form-control" placeholder="e.g. Information Technology & Consulting" value="IT Services & Consulting" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="comp-website">Corporate Website <span class="required">*</span></label>
+                <input type="url" id="comp-website" class="form-control" placeholder="https://company.com" value="https://tcs.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="comp-location">Corporate HQ Location <span class="required">*</span></label>
+                <input type="text" id="comp-location" class="form-control" placeholder="e.g. Mumbai, Maharashtra" value="Mumbai, Maharashtra" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="comp-hr-name">HR Lead Name <span class="required">*</span></label>
+                <input type="text" id="comp-hr-name" class="form-control" placeholder="e.g. Rajesh Menon" value="Rajesh Menon" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="comp-hr-email">HR Email Address <span class="required">*</span></label>
+                <input type="email" id="comp-hr-email" class="form-control" placeholder="e.g. hr@tcs.example.com" value="hr@tcs.example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="comp-hr-mobile">HR Contact Mobile <span class="required">*</span></label>
+                <input type="tel" id="comp-hr-mobile" class="form-control" placeholder="10-digit phone" value="9822019988" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="comp-type">Company Type <span class="required">*</span></label>
+                <select id="comp-type" class="form-control" required>
+                  <option value="MNC" selected>MNC (Multinational Corporation)</option>
+                  <option value="Startup">Startup (High Growth / VC Backed)</option>
+                  <option value="Mid-size">Mid-size Enterprise</option>
+                  <option value="Consultancy">Staffing & Consultancy</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="comp-status">Partnership Status <span class="required">*</span></label>
+                <select id="comp-status" class="form-control" required>
+                  <option value="ACTIVE" selected>ACTIVE (Invited for Current Drives)</option>
+                  <option value="INACTIVE">INACTIVE (Drive Suspended)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="filter-actions" style="margin-top: 1.5rem;">
+              <button type="reset" class="btn btn-secondary">
+                <i class="fa-solid fa-rotate-left"></i> Reset Form
+              </button>
+              <button type="submit" class="btn btn-outline">
+                <i class="fa-solid fa-pen-to-square"></i> Update Company
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fa-solid fa-floppy-disk"></i> Save Company
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/app-live.js"></script>
+</body>
+</html>

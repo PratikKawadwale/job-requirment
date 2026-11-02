@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Recruitment & Placement Management System</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-header">
+        <div class="login-logo">
+          <img src="images/logo.svg" alt="RPMS Logo" width="40" height="40" onerror="this.src='images/logo.png'">
+        </div>
+        <h1 class="login-title">RPMS Portal</h1>
+        <p class="login-subtitle">Recruitment & Placement Management System</p>
+      </div>
+
+      <!-- Dynamic Database Accounts (rpms_db) -->
+      <div class="demo-credentials-box" style="margin-bottom: 1.25rem;">
+        <div style="font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between;">
+          <span><i class="fa-solid fa-users" style="color: var(--primary);"></i> Available Database Accounts (Click to Fill):</span>
+          <span style="font-size: 0.7rem; font-weight: 600; color: #16a34a; background: #ecfdf5; padding: 2px 6px; border-radius: 4px;">Live rpms_db</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.78rem;">
+          <div class="account-pill" data-user="amit.recruiter" data-pass="demo123" data-role="Recruiter" style="cursor: pointer; padding: 6px 10px; background: #eff6ff; border: 1px solid var(--primary); border-radius: 6px; display: flex; justify-content: space-between; align-items: center; transition: all 0.15s ease;">
+            <div><strong>amit.recruiter</strong> <span style="color: var(--text-muted); font-size: 0.72rem;">(Amit Kulkarni)</span></div>
+            <span class="skill-pill" style="font-size: 0.7rem; padding: 2px 6px; background:#e0e7ff; color:#3730a3;">Recruiter</span>
+          </div>
+          <div class="account-pill" data-user="admin" data-pass="admin123" data-role="Admin" style="cursor: pointer; padding: 6px 10px; background: #ffffff; border: 1px solid var(--border-color); border-radius: 6px; display: flex; justify-content: space-between; align-items: center; transition: all 0.15s ease;">
+            <div><strong>admin</strong> <span style="color: var(--text-muted); font-size: 0.72rem;">(System Admin)</span></div>
+            <span class="skill-pill" style="font-size: 0.7rem; padding: 2px 6px; background: #fee2e2; color: #991b1b;">Admin</span>
+          </div>
+          <div class="account-pill" data-user="neha.placement" data-pass="demo123" data-role="Placement Officer" style="cursor: pointer; padding: 6px 10px; background: #ffffff; border: 1px solid var(--border-color); border-radius: 6px; display: flex; justify-content: space-between; align-items: center; transition: all 0.15s ease;">
+            <div><strong>neha.placement</strong> <span style="color: var(--text-muted); font-size: 0.72rem;">(Neha Deshmukh)</span></div>
+            <span class="skill-pill" style="font-size: 0.7rem; padding: 2px 6px; background: #fef3c7; color: #92400e;">Placement Officer</span>
+          </div>
+        </div>
+        <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 6px; text-align: right;">
+          Click any account above to auto-select username, password & role
+        </div>
+      </div>
+
+      <!-- Error Message Banner -->
+      <div id="login-error-alert" style="display: none; background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.85rem; margin-bottom: 1.15rem;">
+        <i class="fa-solid fa-triangle-exclamation"></i> <span id="login-error-msg">Invalid credentials.</span>
+      </div>
+
+      <form id="login-form" action="dashboard.html" method="get">
+        <div class="form-group" style="margin-bottom: 1.15rem;">
+          <label class="form-label" for="email">Username or Official Email <span class="required">*</span></label>
+          <div style="position: relative;">
+            <input 
+              type="text" 
+              id="email" 
+              name="email" 
+              class="form-control" 
+              placeholder="e.g. amit.recruiter, admin, or neha.placement" 
+              value="amit.recruiter" 
+              autocomplete="username"
+              required
+            >
+          </div>
+          <span class="form-hint">Enter your RPMS username (e.g. amit.recruiter, admin) or registered email</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.15rem;">
+          <label class="form-label" for="password">Password <span class="required">*</span></label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            class="form-control" 
+            placeholder="••••••••" 
+            value="demo123" 
+            autocomplete="current-password"
+            required
+          >
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.15rem;">
+          <label class="form-label" for="role">User Role <span class="required">*</span></label>
+          <select id="role" name="role" class="form-control" required>
+            <option value="Admin">Admin</option>
+            <option value="Recruiter" selected>Recruiter</option>
+            <option value="Placement Officer">Placement Officer</option>
+          </select>
+        </div>
+
+        <div class="login-meta-row">
+          <label class="checkbox-label">
+            <input type="checkbox" name="remember" checked>
+            <span>Remember me</span>
+          </label>
+          <a href="#" style="font-size: 0.8rem; font-weight: 500;" onclick="alert('Password reset link will be sent to your registered official email.'); return false;">Forgot Password?</a>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="submit" id="login-btn" class="btn btn-primary" style="flex: 2; padding: 0.75rem 1rem;">
+            <i class="fa-solid fa-right-to-bracket"></i> Login to Dashboard
+          </button>
+          <button type="reset" class="btn btn-secondary" style="flex: 1;">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+          </button>
+        </div>
+      </form>
+
+      <div class="login-footer-note">
+        <i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i>
+        <span>Authorized Personnel Only. All access is logged and audited.</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app-live.js"></script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Openings & Mandates - RPMS Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="app-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="brand-info">
+        <span class="brand-title">RPMS Portal</span>
+        <span class="brand-subtitle">Placement & Career</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-title">Core Navigation</div>
+      <a href="dashboard.html" class="nav-item">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="candidates.html" class="nav-item">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>Candidates</span>
+      </a>
+      <a href="companies.html" class="nav-item">
+        <i class="fa-solid fa-building"></i>
+        <span>Companies</span>
+      </a>
+      <a href="jobs.html" class="nav-item active">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Jobs</span>
+      </a>
+      <a href="applications.html" class="nav-item">
+        <i class="fa-solid fa-file-signature"></i>
+        <span>Applications</span>
+      </a>
+      <a href="interviews.html" class="nav-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Interviews</span>
+      </a>
+      <a href="placement-process.html" class="nav-item">
+        <i class="fa-solid fa-stairs"></i>
+        <span>Placement Process</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <i class="fa-solid fa-chart-column"></i>
+        <span>Reports</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html" class="nav-item logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="app-main">
+
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <button class="mobile-menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('mobile-open')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="system-title-badge">
+          <i class="fa-solid fa-layer-group" style="color: var(--primary);"></i>
+          <span class="portal-text">Recruitment & Placement Management System</span>
+        </div>
+      </div>
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search job roles, companies, tech...">
+      </div>
+      <div class="header-right">
+        <div class="notification-bell">
+          <i class="fa-regular fa-bell"></i>
+          <span class="bell-badge"></span>
+        </div>
+        <div class="user-profile-widget">
+          <div class="user-avatar">PO</div>
+          <div class="user-meta">
+            <span class="user-name">Pratik Sharma</span>
+            <span class="user-role">Placement Officer</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="page-content">
+
+      <!-- Breadcrumbs & Header -->
+      <div class="page-header">
+        <div>
+          <div class="breadcrumb">
+            <a href="dashboard.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.65rem;"></i>
+            <span class="current">Job Openings</span>
+          </div>
+          <h1 class="page-title">Placement Job Openings & Mandates</h1>
+          <p class="page-subtitle">Manage campus recruitment requisitions, eligibility rules, CTC bands, and deadlines</p>
+        </div>
+        <div class="header-actions">
+          <a href="job-form.html" class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i> Create New Job
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Summary KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-info">
+            <h4>Total Jobs</h4>
+            <div class="kpi-number">36</div>
+            <div class="kpi-trend trend-up"><i class="fa-solid fa-briefcase"></i> All drives</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-list-check"></i></div>
+        </div>
+
+        <div class="kpi-card kpi-green">
+          <div class="kpi-info">
+            <h4>Open Jobs</h4>
+            <div class="kpi-number">28</div>
+            <div class="kpi-trend trend-up"><i class="fa-solid fa-circle-check"></i> Accepting applications</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-door-open"></i></div>
+        </div>
+
+        <div class="kpi-card kpi-orange">
+          <div class="kpi-info">
+            <h4>Closed Jobs</h4>
+            <div class="kpi-number">8</div>
+            <div class="kpi-trend trend-muted"><i class="fa-solid fa-lock"></i> Drive completed</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-folder-closed"></i></div>
+        </div>
+
+        <div class="kpi-card kpi-sky">
+          <div class="kpi-info">
+            <h4>Total Vacancies</h4>
+            <div class="kpi-number">142</div>
+            <div class="kpi-trend trend-up"><i class="fa-solid fa-user-group"></i> Active positions</div>
+          </div>
+          <div class="kpi-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+        </div>
+      </div>
+
+      <!-- Filters Panel -->
+      <div class="filter-card">
+        <form action="#" method="get">
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label class="form-label" for="filter-job-code">Job Code</label>
+              <input type="text" id="filter-job-code" class="form-control" placeholder="e.g. JOB-2026-001">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="filter-comp">Company</label>
+              <select id="filter-comp" class="form-control">
+                <option value="">All Companies</option>
+                <option value="TCS">Tata Consultancy Services</option>
+                <option value="Infosys">Infosys Technologies</option>
+                <option value="Wipro">Wipro Digital</option>
+                <option value="Zoho">Zoho Corporation</option>
+                <option value="Cognizant">Cognizant Interactive</option>
+                <option value="Tech Mahindra">Tech Mahindra</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="filter-tech-stack">Technology</label>
+              <select id="filter-tech-stack" class="form-control">
+                <option value="">All Technologies</option>
+                <option value="Java">Java / Spring Boot</option>
+                <option value="Python">Python / Django</option>
+                <option value="React">React / Frontend</option>
+                <option value="FullStack">Full Stack</option>
+                <option value="SQL">Data & SQL</option>
+                <option value="DevOps">Cloud & DevOps</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="filter-job-loc">Location</label>
+              <input type="text" id="filter-job-loc" class="form-control" placeholder="e.g. Pune, Bengaluru, PAN-India">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="filter-job-status">Job Status</label>
+              <select id="filter-job-status" class="form-control">
+                <option value="">All Statuses</option>
+                <option value="OPEN">OPEN</option>
+                <option value="CLOSED">CLOSED</option>
+                <option value="DRAFT">DRAFT</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="filter-emp-type">Employment Type</label>
+              <select id="filter-emp-type" class="form-control">
+                <option value="">All Employment Types</option>
+                <option value="Full-time">Full-time</option>
+                <option value="Internship">Internship</option>
+                <option value="Contract">Contract</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-actions">
+            <button type="reset" class="btn btn-secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Filter Jobs</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Job Openings Table with at least 8 Sample Jobs -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-briefcase"></i> Job Requisitions (Showing 8 of 36)
+          </div>
+          <a href="job-form.html" class="btn btn-sm btn-primary">
+            <i class="fa-solid fa-plus"></i> Post Job Opening
+          </a>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Job Code</th>
+                  <th>Company</th>
+                  <th>Job Title & Type</th>
+                  <th>Core Technology</th>
+                  <th>Openings</th>
+                  <th>Location</th>
+                  <th>Package CTC</th>
+                  <th>Deadline</th>
+                  <th>Status</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- Job 1 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">JOB-2026-001</strong></td>
+                  <td>
+                    <div class="text-strong">Tata Consultancy Services</div>
+                    <div class="sub-meta">COM101 • MNC</div>
+                  </td>
+                  <td>
+                    <div class="text-strong">Software Engineer (Java)</div>
+                    <span class="skill-pill" style="font-size: 0.7rem;">Full-time</span>
+                  </td>
+                  <td><span class="skill-pill" style="background:#e0e7ff; color:#3730a3;">Java / Spring Boot</span></td>
+                  <td><strong style="color: var(--primary);">25</strong></td>
+                  <td>Pune, MH</td>
+                  <td><strong>4.5 - 7.5 LPA</strong></td>
+                  <td>2026-11-15</td>
+                  <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="applications.html" class="btn btn-sm btn-outline" title="View Applications">
+                        <i class="fa-solid fa-users"></i> Applicants
+                      </a>
+                      <a href="job-form.html" class="btn btn-sm btn-secondary" title="Edit Job Details">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Job 2 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">JOB-2026-002</strong></td>
+                  <td>
+                    <div class="text-strong">Infosys Technologies</div>
+                    <div class="sub-meta">COM102 • MNC</div>
+                  </td>
+                  <td>
+                    <div class="text-strong">Associate Systems Engineer</div>
+                    <span class="skill-pill" style="font-size: 0.7rem;">Full-time</span>
+                  </td>
+                  <td><span class="skill-pill" style="background:#dcfce7; color:#166534;">Python / Cloud</span></td>
+                  <td><strong style="color: var(--primary);">30</strong></td>
+                  <td>Bengaluru, KA</td>
+                  <td><strong>4.2 - 6.8 LPA</strong></td>
+                  <td>2026-11-18</td>
+                  <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="applications.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-users"></i> Applicants</a>
+                      <a href="job-form.html" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Job 3 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">JOB-2026-003</strong></td>
+                  <td>
+                    <div class="text-strong">Wipro Digital</div>
+                    <div class="sub-meta">COM103 • MNC</div>
+                  </td>
+                  <td>
+                    <div class="text-strong">Frontend Specialist</div>
+                    <span class="skill-pill" style="font-size: 0.7rem;">Full-time</span>
+                  </td>
+                  <td><span class="skill-pill" style="background:#fef3c7; color:#92400e;">React / TypeScript</span></td>
+                  <td><strong style="color: var(--primary);">15</strong></td>
+                  <td>Hyderabad, TS</td>
+                  <td><strong>5.0 - 8.5 LPA</strong></td>
+                  <td>2026-11-20</td>
+                  <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="applications.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-users"></i> Applicants</a>
+                      <a href="job-form.html" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Job 4 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">JOB-2026-004</strong></td>
+                  <td>
+                    <div class="text-strong">Zoho Corporation</div>
+                    <div class="sub-meta">COM104 • Product</div>
+                  </td>
+                  <td>
+                    <div class="text-strong">Full Stack Product Developer</div>
+                    <span class="skill-pill" style="font-size: 0.7rem;">Full-time</span>
+                  </td>
+                  <td><span class="skill-pill" style="background:#e0e7ff; color:#3730a3;">Java / React / SQL</span></td>
+                  <td><strong style="color: var(--primary);">20</strong></td>
+                  <td>Chennai, TN</td>
+                  <td><strong>6.0 - 10.0 LPA</strong></td>
+                  <td>2026-11-25</td>
+                  <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="applications.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-users"></i> Applicants</a>
+                      <a href="job-form.html" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Job 5 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">JOB-2026-005</strong></td>
+                  <td>
+                    <div class="text-strong">Cognizant Interactive</div>
+                    <div class="sub-meta">COM105 • MNC</div>
+                  </td>
+                  <td>
+                    <div class="text-strong">Data & SQL Analyst</div>
+                    <span class="skill-pill" style="font-size: 0.7rem;">Full-time</span>
+                  </td>
+                  <td><span class="skill-pill" style="background:#f1f5f9; color:#334155;">SQL / Python / BI</span></td>
+                  <td><strong style="color: var(--primary);">18</strong></td>
+                  <td>Pune, MH</td>
+                  <td><strong>4.0 - 6.5 LPA</strong></td>
+                  <td>2026-11-12</td>
+                  <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="applications.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-users"></i> Applicants</a>
+                      <a href="job-form.html" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Job 6 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">JOB-2026-006</strong></td>
+                  <td>
+                    <div class="text-strong">Tech Mahindra</div>
+                    <div class="sub-meta">COM106 • Telecom</div>
+                  </td>
+                  <td>
+                    <div class="text-strong">Cloud DevOps Trainee</div>
+                    <span class="skill-pill" style="font-size: 0.7rem;">Full-time</span>
+                  </td>
+                  <td><span class="skill-pill" style="background:#e0f2fe; color:#0369a1;">AWS / Docker / Linux</span></td>
+                  <td><strong style="color: var(--primary);">12</strong></td>
+                  <td>Bengaluru, KA</td>
+                  <td><strong>4.8 - 7.2 LPA</strong></td>
+                  <td>2026-11-30</td>
+                  <td><span class="badge badge-open"><span class="badge-dot"></span>OPEN</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="applications.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-users"></i> Applicants</a>
+                      <a href="job-form.html" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Job 7 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">JOB-2026-007</strong></td>
+                  <td>
+                    <div class="text-strong">Tata Consultancy Services</div>
+                    <div class="sub-meta">COM101 • MNC</div>
+                  </td>
+                  <td>
+                    <div class="text-strong">QA Automation Trainee</div>
+                    <span class="skill-pill" style="font-size: 0.7rem;">Contract</span>
+                  </td>
+                  <td><span class="skill-pill" style="background:#fee2e2; color:#991b1b;">Selenium / Java</span></td>
+                  <td><strong>14</strong></td>
+                  <td>Mumbai, MH</td>
+                  <td><strong>4.0 - 6.0 LPA</strong></td>
+                  <td>2026-10-20</td>
+                  <td><span class="badge badge-closed"><span class="badge-dot"></span>CLOSED</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="applications.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-users"></i> Applicants</a>
+                      <a href="job-form.html" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Job 8 -->
+                <tr>
+                  <td><strong style="color: var(--primary);">JOB-2026-008</strong></td>
+                  <td>
+                    <div class="text-strong">Infosys Technologies</div>
+                    <div class="sub-meta">COM102 • MNC</div>
+                  </td>
+                  <td>
+                    <div class="text-strong">AI / ML Research Intern</div>
+                    <span class="skill-pill" style="font-size: 0.7rem; background:#fef3c7; color:#92400e;">Internship</span>
+                  </td>
+                  <td><span class="skill-pill" style="background:#dcfce7; color:#166534;">Python / PyTorch</span></td>
+                  <td><strong>8</strong></td>
+                  <td>Bengaluru, KA</td>
+                  <td><strong>5.5 - 9.0 LPA</strong></td>
+                  <td>2026-12-05</td>
+                  <td><span class="badge badge-draft"><span class="badge-dot"></span>DRAFT</span></td>
+                  <td style="text-align: right;">
+                    <div class="btn-group">
+                      <a href="applications.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-users"></i> Applicants</a>
+                      <a href="job-form.html" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/app-live.js"></script>
+</body>
+</html>
